@@ -1,4 +1,4 @@
 package com.example.mayoresfitmakers.datos.repositorio
 
-class EventoRepositorio {
+class FichaRepository {
 }
