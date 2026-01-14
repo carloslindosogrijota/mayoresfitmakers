@@ -1,14 +1,23 @@
-# Android SDK (local)
+# ===== Android SDK (local) =====
 local.properties
 
-# Gradle
+# ===== Gradle =====
 .gradle/
 build/
+**/build/
 
-# Android Studio
+# ===== Android Studio =====
 .idea/
 *.iml
 
-# OS
+# ===== APK / AAB =====
+*.apk
+*.aab
+
+# ===== Logs & reports =====
+*.log
+manifest-merger-*.txt
+
+# ===== OS =====
 .DS_Store
 Thumbs.db
