@@ -69,11 +69,15 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 val perfil = Usuario(
-                    id = idUsuario,
-                    nombre = "Sin nombre",
+                    id = uid,                         // uid tal cual, SIN parseos
                     correo = correo,
+                    nombre = "Sin nombre",
+                    apellido = "",
                     edad = 0,
-                    patologias = emptyList<Patologia>()
+                    direccion = "",
+                    telefono = "",
+                    dni = "",
+                    patologias = emptyList()
                 )
 
                 perfilRepositorio.crearPerfil(perfil, this)

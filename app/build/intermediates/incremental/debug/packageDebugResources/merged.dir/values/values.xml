@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="verde_oscuro">#1B5E20</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Mi Bienestar</string>
+    <string name="apuntate">Apúntate</string>
+    <string name="gcm_defaultSenderId" translatable="false">211494440056</string>
+    <string name="google_api_key" translatable="false">AIzaSyBCp5MOkB1IVtV-CXGqjOjyKW22m3j_TTI</string>
+    <string name="google_app_id" translatable="false">1:211494440056:android:d16e2284cf69a06745f18d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBCp5MOkB1IVtV-CXGqjOjyKW22m3j_TTI</string>
+    <string name="google_storage_bucket" translatable="false">mayores-4d7f6.firebasestorage.app</string>
+    <string name="project_id" translatable="false">mayores-4d7f6</string>
+    <string name="senderismo_image">Imagen de historia</string>
+    <string name="senderismos">Senderismos</string>
+    <style name="Base.Theme.Mayoresfitmakers" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Mayoresfitmakers" parent="Base.Theme.Mayoresfitmakers"/>
+</resources>

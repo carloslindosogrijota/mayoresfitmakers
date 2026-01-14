@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color verde_oscuro
 color white
 drawable button_apuntate_background
 drawable ic_launcher_background
@@ -8,7 +9,6 @@ drawable ic_launcher_foreground
 drawable logo
 id btnApuntate
 id buttonLogin
-id buttonRegistro
 id editTextEmail
 id editTextPassword
 id imageView
@@ -17,7 +17,6 @@ id inputLayoutPassword
 id loginRoot
 id senderismoImage
 id senderismosRecyclerView
-id textOr
 id textSubtitle
 id textTitle
 layout activity_login

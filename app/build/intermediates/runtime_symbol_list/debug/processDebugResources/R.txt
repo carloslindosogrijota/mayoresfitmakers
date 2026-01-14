@@ -2448,6 +2448,7 @@ int color switch_thumb_normal_material_dark 0x7f0503bc
 int color switch_thumb_normal_material_light 0x7f0503bd
 int color tooltip_background_dark 0x7f0503be
 int color tooltip_background_light 0x7f0503bf
+int color verde_oscuro 0x7f0503c1
 int color white 0x7f0503c0
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
@@ -3816,7 +3817,6 @@ int id browser_actions_menu_view 0x7f08006f
 int id btnApuntate 0x7f080070
 int id buttonLogin 0x7f080071
 int id buttonPanel 0x7f080072
-int id buttonRegistro 0x7f080073
 int id cache_measures 0x7f080074
 int id callMeasure 0x7f080075
 int id cancel_button 0x7f080076
@@ -4186,7 +4186,6 @@ int id tag_window_insets_animation_callback 0x7f0801e0
 int id text 0x7f0801e1
 int id text2 0x7f0801e2
 int id textEnd 0x7f0801e3
-int id textOr 0x7f0801e4
 int id textSpacerNoButtons 0x7f0801e5
 int id textSpacerNoTitle 0x7f0801e6
 int id textStart 0x7f0801e7

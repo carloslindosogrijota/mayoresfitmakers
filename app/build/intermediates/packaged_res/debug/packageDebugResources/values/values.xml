@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="verde_oscuro">#1B5E20</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Mi Bienestar</string>
     <string name="apuntate">Apúntate</string>
