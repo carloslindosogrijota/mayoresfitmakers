@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.datos.repositorio.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
+import com.example.mayoresfitmakers.modelo.Patologia
 import com.example.mayoresfitmakers.modelo.infraestructura.Usuario
-
 
 class LoginActivity : AppCompatActivity() {
 
@@ -19,15 +19,16 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // aquí leerías email/password y llamarías a intentarLogin()
+
+
+        intentarLogin()
     }
 
     private fun intentarLogin(correo: String, contrasena: String) {
 
-
         authRepositorio.login(correo, contrasena, object : AutenticacionRepository.LoginCallback {
 
-            override fun onLoginOk(uid: String, email: String) {
+            override fun onLoginOk(uid: String, correo: String) {
                 cargarPerfil(uid, correo)
             }
 
@@ -46,10 +47,21 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onPerfilNoExiste() {
+
+                val idUsuario: Long
+                val idParseado: Long? = uid.toLongOrNull()
+                if (idParseado != null) {
+                    idUsuario = idParseado
+                } else {
+                    idUsuario = uid.hashCode().toLong()
+                }
+
                 val perfil = Usuario(
-                    id = id,
+                    id = idUsuario,
                     nombre = "Sin nombre",
-                    correo = correo
+                    correo = correo,
+                    edad = 0,
+                    patologias = emptyList<Patologia>()
                 )
 
                 perfilRepositorio.crearPerfil(perfil, this)
