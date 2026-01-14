@@ -41,6 +41,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.mayoresfitmakers.ui.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
             android:exported="true"

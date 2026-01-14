@@ -3624,6 +3624,7 @@ int drawable ic_other_sign_in 0x7f0700b3
 int drawable ic_passkey 0x7f0700b4
 int drawable ic_password 0x7f0700b5
 int drawable ic_search_black_24 0x7f0700b6
+int drawable logo 0x7f070103
 int drawable m3_avd_hide_password 0x7f0700b7
 int drawable m3_avd_show_password 0x7f0700b8
 int drawable m3_bottom_sheet_drag_handle 0x7f0700b9
@@ -3945,6 +3946,7 @@ int id ifRoom 0x7f0800f1
 int id ignore 0x7f0800f2
 int id ignoreRequest 0x7f0800f3
 int id image 0x7f0800f4
+int id imageView 0x7f080223
 int id immediateStop 0x7f0800f5
 int id included 0x7f0800f6
 int id indeterminate 0x7f0800f7

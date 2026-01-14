@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mayoresfitmakers.PortadaActivity
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.datos.repositorio.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
@@ -24,9 +25,16 @@ class LoginActivity : AppCompatActivity() {
 
         val contrasena = findViewById<EditText>(R.id.editTextPassword)
         val correo = findViewById<EditText>(R.id.editTextEmail)
+        val botonLogin = findViewById<com.google.android.material.button.MaterialButton>(R.id.buttonLogin)
 
-        intentarLogin(correo.text.toString(), contrasena.text.toString())
+        botonLogin.setOnClickListener {
+            val correoTexto = correo.text.toString().trim()
+            val contrasenaTexto = contrasena.text.toString()
+
+            intentarLogin(correoTexto, contrasenaTexto)
+        }
     }
+
 
     private fun intentarLogin(correo: String, contrasena: String) {
 
@@ -78,7 +86,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navegarMenu() {
-        //startActivity(Intent(this, MenuActivity::class.java))
+        startActivity(Intent(this, PortadaActivity::class.java)) // ejemplo, cambia por la pantalla real
         finish()
     }
+
+
 }

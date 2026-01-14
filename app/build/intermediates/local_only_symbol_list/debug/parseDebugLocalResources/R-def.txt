@@ -5,11 +5,13 @@ color white
 drawable button_apuntate_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable logo
 id btnApuntate
 id buttonLogin
 id buttonRegistro
 id editTextEmail
 id editTextPassword
+id imageView
 id inputLayoutEmail
 id inputLayoutPassword
 id loginRoot
