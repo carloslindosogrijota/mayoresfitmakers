@@ -1,4 +1,7 @@
 package com.example.mayoresfitmakers.modelo
 
-class Evento {
-}
+data class Evento(
+    var id: String? = null,
+    var tipo: String = "",
+    var lugar: String = ""
+)

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "211494440056",
+    "project_id": "mayores-4d7f6",
+    "storage_bucket": "mayores-4d7f6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211494440056:android:d16e2284cf69a06745f18d",
+        "android_client_info": {
+          "package_name": "com.example.mayoresfitmakers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCp5MOkB1IVtV-CXGqjOjyKW22m3j_TTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
