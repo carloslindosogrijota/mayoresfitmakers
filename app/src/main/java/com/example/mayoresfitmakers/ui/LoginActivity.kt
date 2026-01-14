@@ -2,6 +2,8 @@ package com.example.mayoresfitmakers.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
@@ -9,6 +11,7 @@ import com.example.mayoresfitmakers.datos.repositorio.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
 import com.example.mayoresfitmakers.modelo.Patologia
 import com.example.mayoresfitmakers.modelo.infraestructura.Usuario
+import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
 
@@ -19,9 +22,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val contrasena = findViewById<EditText>(R.id.editTextPassword)
+        val correo = findViewById<EditText>(R.id.editTextEmail)
 
-
-        intentarLogin()
+        intentarLogin(correo.text.toString(), contrasena.text.toString())
     }
 
     private fun intentarLogin(correo: String, contrasena: String) {
@@ -74,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navegarMenu() {
-        startActivity(Intent(this, MenuActivity::class.java))
+        //startActivity(Intent(this, MenuActivity::class.java))
         finish()
     }
 }

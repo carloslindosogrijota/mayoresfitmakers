@@ -1,0 +1,13 @@
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\modelo\Evento.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\ui\PortadaActivity.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\ui\LoginActivity.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\datos\repositorio\infraestructura\AutenticacionRepository.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\ui\adaptador\EventosAdapter.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\datos\repositorio\infraestructura\PerfilUsuarioRepository.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\modelo\Patologia.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\datos\repositorio\localización\MapsRepository.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\modelo\infraestructura\Usuario.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\ui\adaptador\SenderismoAdapter.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\ui\SenderismoActivity.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\modelo\Senderismo.kt
+C:\Users\clgwo\Desktop\HACKATON\Development\mayoresfitmakers\mayoresfitmakers\app\src\main\java\com\example\mayoresfitmakers\datos\repositorio\EventoRepository.kt
