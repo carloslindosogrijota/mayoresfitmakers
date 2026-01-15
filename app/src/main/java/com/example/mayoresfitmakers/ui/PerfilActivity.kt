@@ -84,14 +84,15 @@ class PerfilActivity : AppCompatActivity() {
                         val patologias = patologiasList.mapNotNull { map ->
                             try {
                                 Patologia(
-                                    id = (map["id"] as? Long)?.toInt() ?: 0,
-                                    tipo = map["tipo"] as? String ?: "",
-                                    lugar = map["lugar"] as? String ?: ""
+                                    id = map["id"] as? String,
+                                    afecion = map["afecion"] as? String ?: "",
+                                    descripcion = map["descripcion"] as? String ?: ""
                                 )
                             } catch (e: Exception) {
                                 null
                             }
                         }
+
 
                         // Actualizar UI
                         txtNombre.text = nombre
@@ -105,7 +106,7 @@ class PerfilActivity : AppCompatActivity() {
                             txtPatologias.text = "Ninguna registrada"
                         } else {
                             txtPatologias.text = patologias.joinToString("\n") {
-                                "• ${it.tipo} - ${it.lugar}"
+                                "• ${it.afecion}: ${it.descripcion}"
                             }
                         }
                     } else {

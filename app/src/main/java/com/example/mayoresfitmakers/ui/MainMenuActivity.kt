@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.databinding.ActivityMainMenuBinding
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
 import com.example.mayoresfitmakers.modelo.Usuario
+import com.example.mayoresfitmakers.ui.MenuActivity
 import com.example.mayoresfitmakers.ui.recompensa.RecompensaActivity
 import com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
 import com.example.mayoresfitmakers.ui.PerfilActivity
@@ -29,7 +30,6 @@ class MainMenuActivity : AppCompatActivity() {
         configurarClicks()
         cargarNombreUsuario()
     }
-
     private fun configurarClicks() {
         binding.cardActividades.setOnClickListener {
             val intent = Intent(this, ActividadesActivity::class.java)
@@ -45,6 +45,19 @@ class MainMenuActivity : AppCompatActivity() {
             val intent = Intent(this, PerfilActivity::class.java)
             startActivity(intent)
         }
+
+        btnPerfil.setOnClickListener {
+            val intent = Intent(this, PerfilActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnMenu.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnBack.setOnClickListener {
+            finish()
     }
 
     private fun cargarNombreUsuario() {

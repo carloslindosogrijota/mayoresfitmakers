@@ -20,13 +20,17 @@ drawable card_orange
 drawable error
 drawable header_background
 drawable ic_arrow_back
+drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_person
 drawable logo
+id bottomNavigation
 id btnApuntate
 id btnBack
 id btnIr
+id btnMenu
+id btnPerfil
 id buttonLogin
 id cardActividades
 id cardCalendario

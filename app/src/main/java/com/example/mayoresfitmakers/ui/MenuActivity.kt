@@ -1,6 +1,7 @@
 package com.example.mayoresfitmakers.ui
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.app.ActivityOptions
 import androidx.appcompat.app.AppCompatActivity
@@ -18,13 +19,17 @@ class MenuActivity : AppCompatActivity() {
         cardPerfil.setOnClickListener {
             val intent = Intent(this, PerfilActivity::class.java)
 
-            val options = ActivityOptions.makeSceneTransitionAnimation(
-                this,
-                cardPerfil,
-                "card_transition"
-            )
-
-            startActivity(intent, options.toBundle())
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                val options = ActivityOptions.makeSceneTransitionAnimation(
+                    this,
+                    cardPerfil,
+                    "card_transition"
+                )
+                startActivity(intent, options.toBundle())
+            } else {
+                // Fallback para versiones antiguas
+                startActivity(intent)
+            }
         }
     }
 }

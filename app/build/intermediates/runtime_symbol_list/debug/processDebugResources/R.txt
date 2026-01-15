@@ -3629,6 +3629,7 @@ int drawable ic_clear_black_24 0x7f0700ae
 int drawable ic_clock_black_24dp 0x7f0700af
 int drawable ic_expand_less_22px 0x7f0700b0
 int drawable ic_expand_more_22px 0x7f0700b1
+int drawable ic_home 0x7f070127
 int drawable ic_keyboard_black_24dp 0x7f0700b2
 int drawable ic_launcher_background 0x7f0700b3
 int drawable ic_launcher_foreground 0x7f0700b4
@@ -3847,6 +3848,7 @@ int id below 0x7f080063
 int id bestChoice 0x7f080064
 int id blocking 0x7f080065
 int id bottom 0x7f080066
+int id bottomNavigation 0x7f080246
 int id bounce 0x7f080067
 int id bounceBoth 0x7f080068
 int id bounceEnd 0x7f080069
@@ -3859,6 +3861,8 @@ int id browser_actions_menu_view 0x7f08006f
 int id btnApuntate 0x7f080070
 int id btnBack 0x7f080243
 int id btnIr 0x7f080071
+int id btnMenu 0x7f080247
+int id btnPerfil 0x7f080248
 int id bubble_description 0x7f080072
 int id bubble_image 0x7f080073
 int id bubble_moreinfo 0x7f080074
