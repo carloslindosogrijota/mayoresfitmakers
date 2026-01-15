@@ -1163,6 +1163,13 @@
     <color name="material_personalized_color_text_primary_inverse_disable_only">#FFFFFF</color>
     <color name="material_personalized_color_text_secondary_and_tertiary_inverse">#FFFFFF</color>
     <color name="material_personalized_color_text_secondary_and_tertiary_inverse_disabled">#FFFFFF</color>
+    <color name="mb_bg_top">#BFE7FF</color>
+    <color name="mb_blue">#1976D2</color>
+    <color name="mb_card_text">#FFFFFF</color>
+    <color name="mb_green">#2E7D32</color>
+    <color name="mb_orange">#F57C00</color>
+    <color name="mb_text_primary">#1E2A32</color>
+    <color name="mb_text_secondary">#51616D</color>
     <color name="mtrl_btn_text_color_disabled">#61000000</color>
     <color name="mtrl_btn_transparent_bg_color">#00ffffff</color>
     <color name="mtrl_scrim_color">#52000000</color>
@@ -2587,6 +2594,15 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="menu_btn_actividades">Mis Actividades</string>
+    <string name="menu_btn_actividades_desc">Ejercicio fácil y seguro</string>
+    <string name="menu_btn_perfil">Mi Perfil</string>
+    <string name="menu_btn_perfil_desc">Datos y seguimiento</string>
+    <string name="menu_btn_recompensa">Recompensa</string>
+    <string name="menu_btn_recompensa_desc">Logros y beneficios</string>
+    <string name="menu_saludo_fallback">¡Hola!</string>
+    <string name="menu_subtitulo">Tu bienestar, nuestro objetivo.</string>
+    <string name="menu_title">Menú principal</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string description="An announcement for the collapsed menu state of the trailing button in split button [CHAR LIMIT=NONE]" name="mtrl_button_collapsed_content_description">Collapsed</string>
     <string description="An announcement for the expanded menu state of the trailing button in split button [CHAR LIMIT=NONE]" name="mtrl_button_expanded_content_description">Expanded</string>

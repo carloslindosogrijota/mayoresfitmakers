@@ -3,4 +3,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="verde_oscuro">#1B5E20</color>
+
+    <color name="mb_bg_top">#BFE7FF</color>
+    <color name="mb_text_primary">#1E2A32</color>
+    <color name="mb_text_secondary">#51616D</color>
+
+    <color name="mb_green">#2E7D32</color>
+    <color name="mb_orange">#F57C00</color>
+    <color name="mb_blue">#1976D2</color>
+
+    <color name="mb_card_text">#FFFFFF</color>
 </resources>
