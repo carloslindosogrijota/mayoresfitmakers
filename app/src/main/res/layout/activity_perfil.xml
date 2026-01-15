@@ -213,7 +213,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:background="#4CAF50"
+        android:background="#2E7D32"
         android:elevation="8dp"
         android:orientation="horizontal"
         android:paddingVertical="8dp">
@@ -240,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Perfil"
-                android:textColor="#666666"
+                android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp"/>
 
@@ -268,7 +268,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Menú"
-                android:textColor="#666666"
+                android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp"/>
 

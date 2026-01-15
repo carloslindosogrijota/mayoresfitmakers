@@ -66,6 +66,27 @@
         </activity>
         <activity android:name="com.example.mayoresfitmakers.ui.ReproductorRutinaActivity" />
         <activity
+            android:name="com.example.mayoresfitmakers.ui.RGPDActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.CookiesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.ModelosLegalesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.AnalisisLegalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.CesionImagenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.ConsentimientoGrabacionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.DocumentosLegalesActivity"
+            android:exported="false" />
+        <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
             android:exported="true"

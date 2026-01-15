@@ -1,8 +1,8 @@
 package com.example.mayoresfitmakers.modelo
 
 data class Evento(
-    var id: String? = null,
+    var id: String = "",
     var tipo: String = "",
     var lugar: String = "",
-    var imagen: String = ""
+    var imageResId: Int = 0
 )

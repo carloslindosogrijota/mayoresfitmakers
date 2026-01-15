@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Evento
 
@@ -22,39 +21,24 @@ class EventosAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
-        val view: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_evento, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_evento, parent, false)
         return EventoViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return eventos.size
-    }
+    override fun getItemCount(): Int = eventos.size
 
     override fun onBindViewHolder(holder: EventoViewHolder, position: Int) {
-        val evento: Evento = eventos[position]
+        val evento = eventos[position]
 
         holder.txtTipo.text = evento.tipo
         holder.txtLugar.text = evento.lugar
+        holder.imgEvento.setImageResource(evento.imageResId)
 
-        Glide.with(holder.itemView.context)
-            .load(evento.imagen)
-            .placeholder(com.google.android.gms.base.R.drawable.common_full_open_on_phone) // crea este drawable o cámbialo
-            .error(R.drawable.error)
-            .centerCrop()
-            .into(holder.imgEvento)
-
-        holder.itemView.setOnClickListener {
-            onClick(evento)
-        }
+        holder.itemView.setOnClickListener { onClick(evento) }
     }
 
     fun updateList(newList: List<Evento>) {
         eventos = newList
         notifyDataSetChanged()
-    }
-
-    fun getItem(position: Int): Evento {
-        return eventos[position]
     }
 }
