@@ -1,69 +1,82 @@
-//package com.example.mayoresfitmakers.datos.repositorio
-//
-//import android.util.Log
-//import com.example.mayoresfitmakers.modelo.Evento
-//import com.google.firebase.firestore.FirebaseFirestore
-//import com.google.firebase.firestore.ListenerRegistration
-//
-//class EventoRepository {
-//
-//    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
-//    private val collection = db.collection("Eventos")
-//
-//    // CREATE
-//    fun addEvento(evento: Evento, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
-//        val data: Map<String, Any> = mapOf(
-//            "tipo" to evento.tipo,
-//            "lugar" to evento.lugar
-//        )
-//
-//        collection.add(data)
-//            .addOnSuccessListener { onSuccess() }
-//            .addOnFailureListener { ex -> onFailure(ex) }
-//    }
-//
-//    // READ (Realtime listener)
-//    fun listenEventos(
-//        onChange: (List<Evento>) -> Unit,
-//        onError: (Exception) -> Unit
-//    ): ListenerRegistration {
-//        return collection.addSnapshotListener { snapshot, error ->
-//            if (error != null) {
-//                Log.e("EventoRepository", "Error escuchando 'Eventos': ${error.message}", error)
-//                onError(error)
-//                return@addSnapshotListener
-//            }
-//
-//            val lista: List<Evento> = snapshot?.documents?.mapNotNull { doc ->
-//                val evento: Evento? = doc.toObject(Evento::class.java)
-//                evento?.apply { id = doc.id }
-//            } ?: emptyList()
-//
-//            onChange(lista)
-//        }
-//    }
-//
-//    // UPDATE (sobrescribe campos tipo/lugar)
-//    fun updateEvento(evento: Evento, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
-//        val id: String = evento.id ?: run {
-//            onFailure(IllegalArgumentException("Evento.id es null (no se puede actualizar)"))
-//            return
-//        }
-//
-//        val data: Map<String, Any> = mapOf(
-//            "tipo" to evento.tipo,
-//            "lugar" to evento.lugar
-//        )
-//
-//        collection.document(id).set(data)
-//            .addOnSuccessListener { onSuccess() }
-//            .addOnFailureListener { ex -> onFailure(ex) }
-//    }
-//
-//    // DELETE
-//    fun deleteEvento(id: String, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
-//        collection.document(id).delete()
-//            .addOnSuccessListener { onSuccess() }
-//            .addOnFailureListener { ex -> onFailure(ex) }
-//    }
-//}
+package com.example.mayoresfitmakers.datos.repositorio
+
+import com.example.mayoresfitmakers.modelo.Evento
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
+
+class EventoRepository {
+
+    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val collection = db.collection("Eventos")
+
+    fun addEvento(evento: Evento, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
+        val id: String = collection.document().id
+
+        val data: Map<String, Any> = mapOf(
+            "tipo" to evento.tipo,
+            "lugar" to evento.lugar,
+            "imagen" to evento.imagen
+        )
+
+        collection.document(id).set(data)
+            .addOnSuccessListener { onSuccess() }
+            .addOnFailureListener { ex -> onFailure(ex) }
+    }
+
+    fun updateEvento(evento: Evento, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
+        val id: String = evento.id ?: ""
+        if (id.isBlank()) {
+            onFailure(IllegalArgumentException("El id del evento está vacío"))
+            return
+        }
+
+        val data: Map<String, Any> = mapOf(
+            "tipo" to evento.tipo,
+            "lugar" to evento.lugar,
+            "imagen" to evento.imagen
+        )
+
+        collection.document(id).update(data)
+            .addOnSuccessListener { onSuccess() }
+            .addOnFailureListener { ex -> onFailure(ex) }
+    }
+
+    fun deleteEvento(id: String, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
+        collection.document(id).delete()
+            .addOnSuccessListener { onSuccess() }
+            .addOnFailureListener { ex -> onFailure(ex) }
+    }
+
+    fun listenEventos(
+        onData: (List<Evento>) -> Unit,
+        onError: (Exception) -> Unit
+    ): ListenerRegistration {
+        return collection.addSnapshotListener { snapshot, ex ->
+            if (ex != null) {
+                onError(ex)
+                return@addSnapshotListener
+            }
+
+            val lista: MutableList<Evento> = mutableListOf()
+
+            if (snapshot != null) {
+                for (doc in snapshot.documents) {
+                    val tipo: String = doc.getString("tipo") ?: ""
+                    val lugar: String = doc.getString("lugar") ?: ""
+                    val imagen: String = doc.getString("imagen") ?: ""
+
+                    val evento = Evento(
+                        id = doc.id,
+                        tipo = tipo,
+                        lugar = lugar,
+                        imagen = imagen
+                    )
+
+                    lista.add(evento)
+                }
+            }
+
+            onData(lista)
+        }
+    }
+}
