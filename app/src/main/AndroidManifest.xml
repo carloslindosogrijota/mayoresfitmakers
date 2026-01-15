@@ -25,6 +25,11 @@
             android:name=".ui.LoginActivity"
             android:exported="false" />
 
+        <!-- Eventos (carrusel) -->
+        <activity
+            android:name=".ui.EventosActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
