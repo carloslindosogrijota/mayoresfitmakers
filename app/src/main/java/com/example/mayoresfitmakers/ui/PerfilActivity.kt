@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Patologia
+import com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -58,7 +59,7 @@ class PerfilActivity : AppCompatActivity() {
         }
 
         btnMenu.setOnClickListener {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, ActividadesActivity::class.java)
             startActivity(intent)
         }
 

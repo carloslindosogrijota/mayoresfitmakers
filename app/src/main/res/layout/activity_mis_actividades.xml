@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Top Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#2E7D32"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnVolver"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="Volver"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_media_previous"
+            app:tint="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTituloPantalla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mis Actividades"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/btnVolver"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtPregunta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hoy, ¿qué actividad vas a hacer?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2B2B2B"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Card Caminar -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCaminar"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="14dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#2E7D32"
+        app:layout_constraintTop_toBottomOf="@id/txtPregunta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imgCaminar"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:contentDescription="Icono caminar"
+                android:src="@drawable/ic_caminar"
+                app:tint="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtCaminarTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Caminar"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/imgCaminar"
+                app:layout_constraintEnd_toStartOf="@id/imgCaminarFlecha"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:id="@+id/txtCaminarSubtitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Iniciar seguimiento"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/txtCaminarTitulo"
+                app:layout_constraintEnd_toStartOf="@id/imgCaminarFlecha"
+                app:layout_constraintTop_toBottomOf="@id/txtCaminarTitulo"
+                android:layout_marginTop="2dp"/>
+
+            <ImageView
+                android:id="@+id/imgCaminarFlecha"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Ir"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card Ejercicios Suaves -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEjerciciosSuaves"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#F57C00"
+        app:layout_constraintTop_toBottomOf="@id/cardCaminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imgEjerciciosSuaves"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:contentDescription="Icono ejercicios"
+                android:src="@drawable/ic_ejercicios"
+                app:tint="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtEjerciciosSuavesTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ejercicios Suaves"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/imgEjerciciosSuaves"
+                app:layout_constraintEnd_toStartOf="@id/imgEjerciciosSuavesFlecha"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:id="@+id/txtEjerciciosSuavesSubtitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rutinas fáciles y seguras"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/txtEjerciciosSuavesTitulo"
+                app:layout_constraintEnd_toStartOf="@id/imgEjerciciosSuavesFlecha"
+                app:layout_constraintTop_toBottomOf="@id/txtEjerciciosSuavesTitulo"
+                android:layout_marginTop="2dp"/>
+
+            <ImageView
+                android:id="@+id/imgEjerciciosSuavesFlecha"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Ir"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Card Estiramientos -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEstiramientos"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#0288D1"
+        app:layout_constraintTop_toBottomOf="@id/cardEjerciciosSuaves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imgEstiramientos"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:contentDescription="Icono estiramientos"
+                android:src="@drawable/ic_estiramientos"
+                app:tint="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtEstiramientosTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Estiramientos"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/imgEstiramientos"
+                app:layout_constraintEnd_toStartOf="@id/imgEstiramientosFlecha"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:id="@+id/txtEstiramientosSubtitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Movilidad y flexibilidad"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/txtEstiramientosTitulo"
+                app:layout_constraintEnd_toStartOf="@id/imgEstiramientosFlecha"
+                app:layout_constraintTop_toBottomOf="@id/txtEstiramientosTitulo"
+                android:layout_marginTop="2dp"/>
+
+            <ImageView
+                android:id="@+id/imgEstiramientosFlecha"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Ir"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Últimos Logros -->
+    <TextView
+        android:id="@+id/txtUltimosLogrosTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Últimos Logros"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#2B2B2B"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/cardEstiramientos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLogros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="#F3F4F6"
+        app:layout_constraintTop_toBottomOf="@id/txtUltimosLogrosTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txtSaludoLogro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="¡Bien!"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#2B2B2B"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imgCheckLogro"/>
+
+            <TextView
+                android:id="@+id/txtUltimoLogro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Aún no tienes logros registrados."
+                android:textSize="15sp"
+                android:textColor="#444444"
+                app:layout_constraintStart_toStartOf="@id/txtSaludoLogro"
+                app:layout_constraintTop_toBottomOf="@id/txtSaludoLogro"
+                app:layout_constraintEnd_toStartOf="@id/imgCheckLogro"
+                android:layout_marginTop="6dp"/>
+
+            <ImageView
+                android:id="@+id/imgCheckLogro"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:contentDescription="Logro"
+                android:src="@drawable/ic_check_circle"
+                app:tint="#2E7D32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
