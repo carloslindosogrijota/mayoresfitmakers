@@ -1,8 +1,7 @@
-#Thu Jan 15 10:18:59 CET 2026
+#Thu Jan 15 12:07:39 CET 2026
 base.0=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.11=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 base.2=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
 base.3=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
 base.4=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
@@ -10,11 +9,10 @@ base.5=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\d
 base.6=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.7=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
 base.8=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.9=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.9=C\:\\Users\\davga\\Videos\\mayoresfitmakers\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=classes2.dex
-path.11=classes3.dex
 path.2=11/classes.dex
 path.3=12/classes.dex
 path.4=13/classes.dex
@@ -22,11 +20,10 @@ path.5=14/classes.dex
 path.6=4/classes.dex
 path.7=5/classes.dex
 path.8=7/classes.dex
-path.9=9/classes.dex
+path.9=classes3.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.10=classes11.dex
-renamed.11=classes12.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex

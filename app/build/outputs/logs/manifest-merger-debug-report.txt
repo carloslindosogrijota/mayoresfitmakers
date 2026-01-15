@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-78:12
+INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:2:1-78:12
 MERGED from [androidx.databinding:viewbinding:8.13.2] C:\Users\davga\.gradle\caches\8.13\transforms\255290025f46dc97c068f91df02f1f0e\transformed\viewbinding-8.13.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\davga\.gradle\caches\8.13\transforms\cc986f89e9615809a8c846f6bd20e4ac\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\davga\.gradle\caches\8.13\transforms\e9d10f1aac08bca6106df524928af789\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
@@ -111,8 +111,8 @@ ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:8:22-63
 application
-ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:10:5-62:19
-INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:10:5-62:19
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:10:5-76:19
+INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:10:5-76:19
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\davga\.gradle\caches\8.13\transforms\cc986f89e9615809a8c846f6bd20e4ac\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\davga\.gradle\caches\8.13\transforms\cc986f89e9615809a8c846f6bd20e4ac\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\davga\.gradle\caches\8.13\transforms\e9d10f1aac08bca6106df524928af789\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -228,21 +228,57 @@ ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:43:13-44
 activity#com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
-ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:47:9-72
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:45:9-72
 	android:name
-		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:47:19-69
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:45:19-69
 activity#com.example.mayoresfitmakers.ui.recompensa.RecompensaActivity
-ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:48:9-70
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:46:9-70
 	android:name
-		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:48:19-67
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:46:19-67
 activity#com.example.mayoresfitmakers.ui.menu.MainMenuActivity
-ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:50:9-60:20
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:47:9-55:20
 	android:label
-		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:53:13-47
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:50:13-47
 	android:exported
-		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:52:13-36
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:51:13-53
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:48:13-53
+activity#com.example.mayoresfitmakers.ui.RGPDActivity
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:56:9-58:40
+	android:exported
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:58:13-37
+	android:name
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:57:13-44
+activity#com.example.mayoresfitmakers.ui.CookiesActivity
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:59:9-61:40
+	android:exported
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:60:13-47
+activity#com.example.mayoresfitmakers.ui.ModelosLegalesActivity
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:62:9-64:40
+	android:exported
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:64:13-37
+	android:name
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:63:13-54
+activity#com.example.mayoresfitmakers.ui.AnalisisLegalActivity
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:65:9-67:40
+	android:exported
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:67:13-37
+	android:name
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:66:13-53
+activity#com.example.mayoresfitmakers.ui.CesionImagenActivity
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:68:9-70:40
+	android:exported
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:70:13-37
+	android:name
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:69:13-52
+activity#com.example.mayoresfitmakers.ui.ConsentimientoGrabacionActivity
+ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:71:9-73:40
+	android:exported
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:73:13-37
+	android:name
+		ADDED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml:72:13-63
 uses-sdk
 INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\davga\Videos\mayoresfitmakers\app\src\main\AndroidManifest.xml

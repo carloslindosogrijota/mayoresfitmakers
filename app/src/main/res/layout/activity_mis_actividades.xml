@@ -163,7 +163,7 @@
                 android:id="@+id/txtEjerciciosSuavesTitulo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Ejercicios Suaves"
+                android:text="Ejercicios Fisicos"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -233,7 +233,7 @@
                 android:id="@+id/txtEstiramientosTitulo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Estiramientos"
+                android:text="Eventos"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -246,13 +246,14 @@
                 android:id="@+id/txtEstiramientosSubtitulo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Movilidad y flexibilidad"
+                android:layout_marginTop="2dp"
+                android:text="Quedadas para realizar actividades deportivas"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@id/txtEstiramientosTitulo"
                 app:layout_constraintEnd_toStartOf="@id/imgEstiramientosFlecha"
-                app:layout_constraintTop_toBottomOf="@id/txtEstiramientosTitulo"
-                android:layout_marginTop="2dp"/>
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/txtEstiramientosTitulo"
+                app:layout_constraintTop_toBottomOf="@id/txtEstiramientosTitulo" />
 
             <ImageView
                 android:id="@+id/imgEstiramientosFlecha"
@@ -337,7 +338,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </com.google.android.material.card.MaterialCardView>
 
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
