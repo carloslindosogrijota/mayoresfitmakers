@@ -67,24 +67,6 @@
         <activity
             android:name="com.example.mayoresfitmakers.ui.LoginActivity"
             android:exported="false" />
-
-        <!-- Eventos (carrusel) -->
-        <activity
-            android:name="com.example.mayoresfitmakers.ui.EventosActivity"
-            android:exported="false" />
-        <activity android:name="com.example.mayoresfitmakers.ui.actividades.ActividadesActivity" />
-        <activity android:name="com.example.mayoresfitmakers.ui.recompensa.RecompensaActivity" />
-        <activity android:name="com.example.mayoresfitmakers.ui.PerfilActivity" />
-        <activity
-            android:name="com.example.mayoresfitmakers.ui.menu.MainMenuActivity"
-            android:exported="true"
-            android:label="@string/menu_title" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.example.mayoresfitmakers.ui.EventosActivity"
             android:exported="false" />
@@ -97,6 +79,18 @@
         <activity
             android:name="com.example.mayoresfitmakers.ui.MenuActivity"
             android:exported="false" />
+        <activity android:name="com.example.mayoresfitmakers.ui.actividades.ActividadesActivity" />
+        <activity android:name="com.example.mayoresfitmakers.ui.recompensa.RecompensaActivity" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.menu.MainMenuActivity"
+            android:exported="true"
+            android:label="@string/menu_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
