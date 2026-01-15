@@ -110,6 +110,9 @@
             android:name="com.example.mayoresfitmakers.ui.ConsentimientoGrabacionActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.mayoresfitmakers.ui.DocumentosLegalesActivity"
+            android:exported="false" />
+        <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
             android:exported="true"
