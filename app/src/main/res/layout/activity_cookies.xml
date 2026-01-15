@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cookiesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarCookies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:title="Política de cookies"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:id="@+id/scrollCookies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/cookiesContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTituloCookies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Política de cookies"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvCookiesTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:text="La aplicación Mi Bienestar utiliza cookies y tecnologías similares con el objetivo de mejorar la experiencia de uso de las personas mayores y garantizar el correcto funcionamiento de la aplicación.\n\nLas cookies son pequeños archivos que se almacenan en el dispositivo del usuario y permiten recordar información básica relacionada con la navegación y el uso de la aplicación.\n\nTipos de cookies utilizadas\n\nMi Bienestar utiliza únicamente cookies necesarias y funcionales, tales como:\n\n• Cookies técnicas, que permiten el funcionamiento básico de la aplicación.\n• Cookies de personalización, que facilitan una experiencia adaptada a las necesidades del usuario, como preferencias de uso o ajustes sencillos.\n\nNo se utilizan cookies publicitarias ni cookies destinadas a fines comerciales externos.\n\nFinalidad del uso de cookies\n\nLas cookies se emplean para:\n\n• Garantizar el correcto funcionamiento de la aplicación.\n• Mejorar la navegación y facilidad de uso.\n• Analizar de forma básica el uso de la aplicación con fines de mejora del servicio.\n\nConsentimiento del usuario\n\nAl utilizar la aplicación, el usuario acepta el uso de cookies conforme a lo establecido en la Política de Cookies. El usuario puede configurar su dispositivo para bloquear o eliminar las cookies, aunque esto podría afectar al funcionamiento de algunas funcionalidades de la aplicación.\n\nGestión de cookies\n\nEl usuario puede gestionar o eliminar las cookies a través de la configuración de su dispositivo en cualquier momento.\n\nLegislación aplicable\n\nLa Política de Cookies de Mi Bienestar se ajusta a la normativa vigente en materia de protección de datos y a la legislación española aplicable." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCerrarCookies"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

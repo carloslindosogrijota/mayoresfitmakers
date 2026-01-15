@@ -1,13 +1,17 @@
 package com.example.mayoresfitmakers.ui
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
+import com.example.mayoresfitmakers.modelo.Patologia
+import com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.example.mayoresfitmakers.modelo.Patologia
 
 class PerfilActivity : AppCompatActivity() {
 
@@ -18,6 +22,10 @@ class PerfilActivity : AppCompatActivity() {
     private lateinit var txtEdad: TextView
     private lateinit var txtRacha: TextView
     private lateinit var txtPatologias: TextView
+
+    private lateinit var btnPerfil: LinearLayout
+    private lateinit var btnMenu: LinearLayout
+    private lateinit var btnBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +41,31 @@ class PerfilActivity : AppCompatActivity() {
         txtRacha = findViewById(R.id.txtRacha)
         txtPatologias = findViewById(R.id.txtPatologias)
 
+        btnPerfil = findViewById(R.id.btnPerfil)
+        btnMenu = findViewById(R.id.btnMenu)
+        btnBack = findViewById(R.id.btnBack)
+
+        // Configurar listeners de botones
+        configurarBotones()
+
         // Obtener datos del usuario
         cargarDatosUsuario()
+    }
+
+    private fun configurarBotones() {
+        btnPerfil.setOnClickListener {
+            val intent = Intent(this, PerfilActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnMenu.setOnClickListener {
+            val intent = Intent(this, ActividadesActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun cargarDatosUsuario() {
@@ -54,14 +85,15 @@ class PerfilActivity : AppCompatActivity() {
                         val patologias = patologiasList.mapNotNull { map ->
                             try {
                                 Patologia(
-                                    id = (map["id"] as? Long)?.toInt() ?: 0,
-                                    tipo = map["tipo"] as? String ?: "",
-                                    lugar = map["lugar"] as? String ?: ""
+                                    id = map["id"] as? String,
+                                    afecion = map["afecion"] as? String ?: "",
+                                    descripcion = map["descripcion"] as? String ?: ""
                                 )
                             } catch (e: Exception) {
                                 null
                             }
                         }
+
 
                         // Actualizar UI
                         txtNombre.text = nombre
@@ -75,7 +107,7 @@ class PerfilActivity : AppCompatActivity() {
                             txtPatologias.text = "Ninguna registrada"
                         } else {
                             txtPatologias.text = patologias.joinToString("\n") {
-                                "• ${it.tipo} - ${it.lugar}"
+                                "• ${it.afecion}: ${it.descripcion}"
                             }
                         }
                     } else {

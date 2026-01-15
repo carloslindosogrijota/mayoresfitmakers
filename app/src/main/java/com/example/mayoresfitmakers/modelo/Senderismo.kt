@@ -1,5 +1,8 @@
 package com.example.mayoresfitmakers.modelo
 
 data class Senderismo(
-    val imageResId: Int
+    var id: String = "",
+    var nombre: String = "",
+    var ruta: String = "",
+    var distancia: String = ""
 )

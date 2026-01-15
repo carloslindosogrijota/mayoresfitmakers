@@ -2,17 +2,16 @@ package com.example.mayoresfitmakers.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mayoresfitmakers.PortadaActivity
 import com.example.mayoresfitmakers.R
-import com.example.mayoresfitmakers.datos.repositorio.AutenticacionRepository
+import com.example.mayoresfitmakers.datos.repositorio.infraestructura.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
-import com.example.mayoresfitmakers.modelo.Patologia
-import com.example.mayoresfitmakers.modelo.infraestructura.Usuario
-import com.google.android.material.textfield.TextInputLayout
+import com.example.mayoresfitmakers.modelo.Usuario
+import com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
+import com.google.android.material.button.MaterialButton
 
 class LoginActivity : AppCompatActivity() {
 
@@ -23,72 +22,115 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val contrasena = findViewById<EditText>(R.id.editTextPassword)
-        val correo = findViewById<EditText>(R.id.editTextEmail)
-        val botonLogin = findViewById<com.google.android.material.button.MaterialButton>(R.id.buttonLogin)
+        Log.d("LOGIN", "LoginActivity.onCreate")
+
+        val correoInput = findViewById<EditText>(R.id.editTextEmail)
+        val contrasenaInput = findViewById<EditText>(R.id.editTextPassword)
+        val botonLogin = findViewById<MaterialButton>(R.id.buttonLogin)
 
         botonLogin.setOnClickListener {
-            val correoTexto = correo.text.toString().trim()
-            val contrasenaTexto = contrasena.text.toString()
+            val correo = correoInput.text.toString().trim()
+            val contrasena = contrasenaInput.text.toString()
 
-            intentarLogin(correoTexto, contrasenaTexto)
+            Log.d("LOGIN", "Botón login pulsado correo=$correo")
+
+            intentarLogin(correo, contrasena)
         }
     }
 
-
     private fun intentarLogin(correo: String, contrasena: String) {
 
-        authRepositorio.login(correo, contrasena, object : AutenticacionRepository.LoginCallback {
+        Log.d("LOGIN", "Intentando login correo=$correo")
 
-            override fun onLoginOk(uid: String, correo: String) {
-                cargarPerfil(uid, correo)
-            }
+        authRepositorio.login(
+            correo,
+            contrasena,
+            object : AutenticacionRepository.LoginCallback {
 
-            override fun onLoginError(mensaje: String) {
-                Toast.makeText(this@LoginActivity, mensaje, Toast.LENGTH_SHORT).show()
+                override fun onLoginOk(uid: String, correo: String) {
+                    Log.d("LOGIN", "Login OK uid=$uid correo=$correo")
+                    cargarPerfil(uid, correo)
+                }
+
+                override fun onLoginError(mensaje: String) {
+                    Log.e("LOGIN", "Login ERROR: $mensaje")
+                    Toast.makeText(this@LoginActivity, mensaje, Toast.LENGTH_SHORT).show()
+                }
             }
-        })
+        )
     }
 
     private fun cargarPerfil(uid: String, correo: String) {
 
-        perfilRepositorio.obtenerPerfil(uid, object : PerfilUsuarioRepository.PerfilCallback {
+        Log.d("LOGIN", "Llamando a obtenerPerfil uid=$uid")
 
-            override fun onPerfilOk(perfil: Usuario) {
-                navegarMenu()
-            }
+        perfilRepositorio.obtenerPerfil(
+            uid,
+            object : PerfilUsuarioRepository.PerfilCallback {
 
-            override fun onPerfilNoExiste() {
-
-                val idUsuario: Long
-                val idParseado: Long? = uid.toLongOrNull()
-                if (idParseado != null) {
-                    idUsuario = idParseado
-                } else {
-                    idUsuario = uid.hashCode().toLong()
+                override fun onPerfilOk(perfil: Usuario) {
+                    Log.d("LOGIN", "Perfil EXISTE perfil=$perfil")
+                    navegarMenu()
                 }
 
-                val perfil = Usuario(
-                    id = idUsuario,
-                    nombre = "Sin nombre",
-                    correo = correo,
-                    edad = 0,
-                    patologias = emptyList<Patologia>()
-                )
+                override fun onPerfilNoExiste() {
+                    Log.d("LOGIN", "Perfil NO existe, creando perfil")
 
-                perfilRepositorio.crearPerfil(perfil, this)
-            }
+                    val perfilNuevo = Usuario(
+                        id = uid,
+                        correo = correo,
+                        nombre = "",
+                        apellido = "",
+                        edad = 0,
+                        direccion = "",
+                        telefono = "",
+                        dni = "",
+                        patologias = emptyList()
+                    )
 
-            override fun onPerfilError(mensaje: String) {
-                Toast.makeText(this@LoginActivity, mensaje, Toast.LENGTH_SHORT).show()
+                    Log.d("LOGIN", "Perfil nuevo=$perfilNuevo")
+
+                    perfilRepositorio.crearPerfil(
+                        perfilNuevo,
+                        object : PerfilUsuarioRepository.PerfilCallback {
+
+                            override fun onPerfilOk(perfil: Usuario) {
+                                Log.d("LOGIN", "Perfil creado OK")
+                                navegarMenu()
+                            }
+
+                            override fun onPerfilNoExiste() {
+                                Log.e("LOGIN", "Error: onPerfilNoExiste tras crear perfil")
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "No se pudo crear el perfil",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+
+                            override fun onPerfilError(mensaje: String) {
+                                Log.e("LOGIN", "Error al crear perfil: $mensaje")
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    mensaje,
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                    )
+                }
+
+                override fun onPerfilError(mensaje: String) {
+                    Log.e("LOGIN", "Error al obtener perfil: $mensaje")
+                    Toast.makeText(this@LoginActivity, mensaje, Toast.LENGTH_SHORT).show()
+                }
             }
-        })
+        )
     }
 
     private fun navegarMenu() {
-        startActivity(Intent(this, PortadaActivity::class.java)) // ejemplo, cambia por la pantalla real
+        Log.d("LOGIN", "Navegando a PortadaActivity")
+        startActivity(Intent(this, ActividadesActivity::class.java))
         finish()
     }
-
-
 }

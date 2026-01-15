@@ -3,4 +3,19 @@
     <string name="senderismos">Senderismos</string>
     <string name="senderismo_image">Imagen de historia</string>
     <string name="ruta">Comienza tu ruta</string>
+
+
+    <string name="menu_saludo_fallback">¡Hola!</string>
+    <string name="menu_subtitulo">Tu bienestar, nuestro objetivo.</string>
+
+    <string name="menu_btn_actividades">Mis Actividades</string>
+    <string name="menu_btn_actividades_desc">Ejercicio fácil y seguro</string>
+
+    <string name="menu_btn_recompensa">Recompensa</string>
+    <string name="menu_btn_recompensa_desc">Logros y beneficios</string>
+
+    <string name="menu_btn_perfil">Mi Perfil</string>
+    <string name="menu_btn_perfil_desc">Datos y seguimiento</string>
+
+    <string name="menu_title">Menú principal</string>
 </resources>
