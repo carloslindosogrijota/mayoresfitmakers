@@ -6,7 +6,6 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mayoresfitmakers.PortadaActivity
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.datos.repositorio.infraestructura.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
@@ -130,7 +129,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navegarMenu() {
         Log.d("LOGIN", "Navegando a PortadaActivity")
-        startActivity(Intent(this, PortadaActivity::class.java))
+        startActivity(Intent(this, MenuActivity::class.java))
         finish()
     }
 }

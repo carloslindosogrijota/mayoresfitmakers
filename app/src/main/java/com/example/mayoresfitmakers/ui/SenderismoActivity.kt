@@ -1,4 +1,4 @@
-package com.example.mayoresfitmakers
+package com.example.mayoresfitmakers.ui
 
 import android.os.Bundle
 import android.widget.Button
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Senderismo
 import com.example.proyectopruebas.SenderismoAdapter
 

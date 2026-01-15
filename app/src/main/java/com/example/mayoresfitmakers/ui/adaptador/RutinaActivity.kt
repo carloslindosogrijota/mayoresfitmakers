@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import com.example.mayoresfitmakers.R
-import com.example.mayoresfitmakers.SenderismoActivity
+import com.example.mayoresfitmakers.ui.SenderismoActivity
 
 class RutinaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
