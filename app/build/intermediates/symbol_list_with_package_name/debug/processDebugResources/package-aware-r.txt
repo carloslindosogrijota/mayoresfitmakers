@@ -2449,6 +2449,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color verde_oscuro
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -3573,6 +3574,8 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_apuntate_background
+drawable button_senderismo_background
+drawable card_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3814,10 +3817,21 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn10min
+id btn20min
+id btn30min
+id btnAerobico
+id btnAlto
 id btnApuntate
+id btnBajo
+id btnEjercicios
+id btnEstirar
+id btnFinalizar
+id btnFuerza
+id btnMedio
+id btnSenderismo
 id buttonLogin
 id buttonPanel
-id buttonRegistro
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3948,6 +3962,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imgEjercicio
 id immediateStop
 id included
 id indeterminate
@@ -3962,6 +3977,9 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutPaso1Tipo
+id layoutPaso2Tiempo
+id layoutPaso3Nivel
 id left
 id leftToRight
 id legacy
@@ -4187,7 +4205,6 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
-id textOr
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -4223,6 +4240,15 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtContadorPasos
+id txtDescripcion
+id txtDuracion
+id txtEdad
+id txtNombre
+id txtNombreEjercicio
+id txtPatologias
+id txtRacha
+id txtTituloRutina
 id unchecked
 id uniform
 id unlabeled
@@ -4230,6 +4256,7 @@ id up
 id useLogo
 id vertical
 id vertical_only
+id viewPagerRutina
 id view_offset_helper
 id view_transition
 id view_tree_disjoint_parent
@@ -4369,7 +4396,11 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
+layout activity_perfil
 layout activity_portada
+layout activity_reproductor_rutina
+layout activity_rutina
+layout activity_seleccion_ejercicio
 layout activity_senderismo
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -4391,6 +4422,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_ejercicio
 layout item_senderismo
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4491,7 +4523,6 @@ string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
-string apuntate
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -4656,6 +4687,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string ruta
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
