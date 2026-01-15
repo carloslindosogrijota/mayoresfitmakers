@@ -1,106 +1,146 @@
 [
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_login.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/layout_item_senderismo.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/layout/item_senderismo.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-anydpi/ic_launcher_round.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/drawable_card_background.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/drawable/card_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-anydpi/ic_launcher.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_senderismo.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_senderismo.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/layout_activity_login.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/layout/activity_login.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-anydpi/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/layout_activity_rutina.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/layout/activity_rutina.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_perfil.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_perfil.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/drawable_logo.png.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/drawable/logo.png"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/drawable_button_senderismo_background.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/drawable/button_senderismo_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/xml/data_extraction_rules.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_error.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/error.png"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_activadades.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_activadades.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_green.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_green.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_button_senderismo_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/button_senderismo_background.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/layout_activity_senderismo.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/layout/activity_senderismo.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_portada.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_portada.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_background.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/layout_activity_perfil.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/layout/activity_perfil.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_rutina.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_rutina.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/layout_activity_portada.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/layout/activity_portada.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-anydpi/ic_launcher.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_item_evento.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/item_evento.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/drawable_button_apuntate_background.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/drawable/button_apuntate_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_main_menu.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_main_menu.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/xml_backup_rules.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-49:/xml_backup_rules.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-51:/xml/backup_rules.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_eventos.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_eventos.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_button_apuntate_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/button_apuntate_background.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_blue.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_blue.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_bg_menu_gradient.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/bg_menu_gradient.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_orange.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_orange.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_recompensa.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_recompensa.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_logo.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_item_senderismo.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/item_senderismo.xml"
     }
 ]

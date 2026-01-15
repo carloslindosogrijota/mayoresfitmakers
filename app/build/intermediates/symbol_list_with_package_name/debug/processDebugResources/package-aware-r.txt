@@ -2370,6 +2370,13 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color mb_bg_top
+color mb_blue
+color mb_card_text
+color mb_green
+color mb_orange
+color mb_text_primary
+color mb_text_secondary
 color mtrl_btn_bg_color_selector
 color mtrl_btn_ripple_color
 color mtrl_btn_stroke_color_selector
@@ -3565,6 +3572,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_menu_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3576,6 +3584,9 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable button_apuntate_background
 drawable button_senderismo_background
 drawable card_background
+drawable card_blue
+drawable card_green
+drawable card_orange
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3826,6 +3837,9 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id cardActividades
+id cardPerfil
+id cardRecompensa
 id carryVelocity
 id center
 id centerCrop
@@ -3948,6 +3962,7 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
+id iconActividades
 id icon_group
 id icon_only
 id ifRoom
@@ -3955,7 +3970,10 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imgCloud
 id imgEvento
+id imgLogo
+id imgPersona
 id immediateStop
 id included
 id indeterminate
@@ -4111,6 +4129,7 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id rootMenu
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -4236,6 +4255,8 @@ id txtLugar
 id txtNombre
 id txtPatologias
 id txtRacha
+id txtSaludo
+id txtSubtitulo
 id txtTipo
 id unchecked
 id uniform
@@ -4382,10 +4403,13 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_activadades
 layout activity_eventos
 layout activity_login
+layout activity_main_menu
 layout activity_perfil
 layout activity_portada
+layout activity_recompensa
 layout activity_rutina
 layout activity_senderismo
 layout browser_actions_context_menu_page
@@ -4599,6 +4623,15 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string menu_btn_actividades
+string menu_btn_actividades_desc
+string menu_btn_perfil
+string menu_btn_perfil_desc
+string menu_btn_recompensa
+string menu_btn_recompensa_desc
+string menu_saludo_fallback
+string menu_subtitulo
+string menu_title
 string mtrl_badge_numberless_content_description
 string mtrl_button_collapsed_content_description
 string mtrl_button_expanded_content_description

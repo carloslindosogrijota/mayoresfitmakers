@@ -30,6 +30,22 @@
             android:name=".ui.EventosActivity"
             android:exported="false" />
 
+        <activity android:name=".ui.actividades.ActividadesActivity" />
+        <activity android:name=".ui.recompensa.RecompensaActivity" />
+        <activity android:name=".ui.PerfilActivity" />
+
+        <activity
+            android:name=".ui.menu.MainMenuActivity"
+            android:exported="true"
+            android:label="@string/menu_title">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>
