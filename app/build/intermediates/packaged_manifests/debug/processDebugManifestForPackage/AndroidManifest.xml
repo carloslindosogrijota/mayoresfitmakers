@@ -33,6 +33,12 @@
         android:theme="@style/Theme.Mayoresfitmakers" >
         <activity
             android:name="com.example.mayoresfitmakers.PortadaActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.SeleccionEjercicioActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,9 +46,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.example.mayoresfitmakers.ui.LoginActivity"
-            android:exported="false" />
+        <activity android:name="com.example.mayoresfitmakers.ui.ReproductorRutinaActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0">
+
+    <TextView
+        android:id="@+id/txtTituloRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu Rutina"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:gravity="center"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerRutina"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtContadorPasos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejercicio 1 de X"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡TERMINAR RUTINA!"
+        android:textSize="24sp"
+        android:backgroundTint="#4CAF50"
+        android:layout_margin="16dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

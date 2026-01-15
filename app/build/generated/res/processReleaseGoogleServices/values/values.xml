@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">211494440056</string>
-    <string name="google_api_key" translatable="false">AIzaSyBCp5MOkB1IVtV-CXGqjOjyKW22m3j_TTI</string>
-    <string name="google_app_id" translatable="false">1:211494440056:android:d16e2284cf69a06745f18d</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBCp5MOkB1IVtV-CXGqjOjyKW22m3j_TTI</string>
-    <string name="google_storage_bucket" translatable="false">mayores-4d7f6.firebasestorage.app</string>
-    <string name="project_id" translatable="false">mayores-4d7f6</string>
-</resources>
