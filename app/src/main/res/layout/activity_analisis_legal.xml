@@ -51,6 +51,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCerrarAnalisisLegal"
+                app:backgroundTint="@color/verde_oscuro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cerrar" />

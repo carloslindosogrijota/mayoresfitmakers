@@ -71,6 +71,9 @@
         <activity
             android:name=".ui.ConsentimientoGrabacionActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.DocumentosLegalesActivity"
+            android:exported="false" />
 
 
     </application>

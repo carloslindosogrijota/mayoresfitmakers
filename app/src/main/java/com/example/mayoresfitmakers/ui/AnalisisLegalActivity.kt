@@ -14,7 +14,7 @@ class AnalisisLegalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_analisislegal)
+        setContentView(R.layout.activity_analisis_legal)
 
         toolbarAnalisisLegal = findViewById(R.id.toolbarAnalisisLegal)
         btnCerrarAnalisisLegal = findViewById(R.id.btnCerrarAnalisisLegal)

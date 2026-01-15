@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/documentosLegalesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDocumentosLegales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:title="Documentos legales"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:id="@+id/scrollDocumentosLegales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/documentosLegalesContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accede a la información legal y a los formularios de consentimiento."
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRgpd"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Política de privacidad (RGPD)" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCookies"
+                android:layout_width="match_parent"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Política de cookies" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModelosLegales"
+                android:layout_width="match_parent"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Condiciones de uso de imágenes (Modelos legales)" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAnalisisLegal"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Análisis legal del proyecto" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCesionImagen"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Modelo: Cesión de derechos de imagen (Imprimible)" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConsentimientoGrabacion"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Consentimiento de grabación y difusión (Imprimible)" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

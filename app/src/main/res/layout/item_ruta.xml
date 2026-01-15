@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="IR"
+        app:backgroundTint="@color/verde_oscuro"
         app:layout_constraintTop_toBottomOf="@id/txtTipo"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp"/>
