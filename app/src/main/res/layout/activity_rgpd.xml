@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rgpdRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarRgpd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:title="Política de privacidad"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:id="@+id/scrollRgpd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/rgpdContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTituloRgpd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Política de privacidad"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvRgpdTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:text="La aplicación Mi Bienestar está diseñada para ayudar a las personas de la tercera edad a mejorar su movilidad, funcionalidad y bienestar general en su día a día, garantizando en todo momento la protección de sus datos personales.\n\nEl responsable del tratamiento de los datos es Mi Bienestar, con domicilio en Villanueva de la Cañada (Madrid).\n\nLa aplicación recoge únicamente los datos necesarios para su correcto funcionamiento, como datos identificativos básicos, información relacionada con la movilidad y el uso de la aplicación, así como datos técnicos del dispositivo.\n\nLos datos personales se utilizan para personalizar las rutinas de ejercicio, realizar un seguimiento del progreso del usuario, mejorar la experiencia dentro de la aplicación y garantizar la calidad del servicio ofrecido.\n\nEl tratamiento de los datos se basa en el consentimiento del usuario y en la necesidad de prestar el servicio solicitado.\n\nLos datos se conservan mientras el usuario mantenga su cuenta activa y no se ceden a terceros, salvo obligación legal.\n\nLos usuarios pueden acceder, rectificar o solicitar la eliminación de sus datos personales en cualquier momento.\n\nMi Bienestar aplica medidas de seguridad adecuadas para proteger los datos personales y garantizar su confidencialidad." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCerrarRgpd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

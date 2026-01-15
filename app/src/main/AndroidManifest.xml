@@ -42,22 +42,36 @@
         <activity
             android:name=".ui.MenuActivity"
             android:exported="false" />
-
-
         <activity android:name=".ui.actividades.ActividadesActivity" />
         <activity android:name=".ui.recompensa.RecompensaActivity" />
-
         <activity
             android:name=".ui.menu.MainMenuActivity"
             android:exported="true"
             android:label="@string/menu_title">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name=".ui.RGPDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CookiesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ModelosLegalesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.AnalisisLegalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CesionImagenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ConsentimientoGrabacionActivity"
+            android:exported="false" />
+
 
     </application>
 
