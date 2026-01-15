@@ -1,7 +1,10 @@
-package com.example.mayoresfitmakers.ui
+package com.example.mayoresfitmakers
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.drawable.Drawable
 import android.os.*
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -22,25 +25,28 @@ import kotlin.math.roundToInt
 
 class MapActivity : AppCompatActivity() {
 
+    // 📍 Destino hardcodeado
+    private val DESTINO = GeoPoint(40.4469, -3.9990)
+
+    // ⏱️ FACTOR REALISTA PARA PERSONAS MAYORES
+    private val FACTOR_MAYOR = 3.0
+
     private lateinit var map: MapView
     private lateinit var locationOverlay: MyLocationNewOverlay
-    private lateinit var destino: GeoPoint
-    private lateinit var txtDistancia: TextView
+
     private lateinit var txtTiempo: TextView
+    private lateinit var txtDistancia: TextView
 
     private var rutaActual: Polyline? = null
     private var yaHaLlegado = false
 
     private val LOCATION_PERMISSION = 1001
-
-    // Handler para actualizar posición (OSMDroid way)
     private val handler = Handler(Looper.getMainLooper())
-    private val updateInterval = 2000L // 2 segundos
+    private val updateInterval = 2000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // OSMDroid config
         Configuration.getInstance().load(
             applicationContext,
             getSharedPreferences("osmdroid", MODE_PRIVATE)
@@ -49,22 +55,14 @@ class MapActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_map)
 
-        // Datos desde el carrusel
-        val lat = intent.getDoubleExtra("lat", 0.0)
-        val lng = intent.getDoubleExtra("lng", 0.0)
-        val nombre = intent.getStringExtra("nombre") ?: "Destino"
-
-        destino = GeoPoint(lat, lng)
-
-        // Views
         map = findViewById(R.id.map)
-        txtDistancia = findViewById(R.id.txtDistancia)
         txtTiempo = findViewById(R.id.txtTiempo)
+        txtDistancia = findViewById(R.id.txtDistancia)
 
         map.setMultiTouchControls(true)
-        map.controller.setZoom(17.5)
+        map.controller.setZoom(18.0)
 
-        addDestinationMarker(destino, nombre)
+        addDestinationMarker(DESTINO)
         checkLocationPermission()
     }
 
@@ -87,7 +85,6 @@ class MapActivity : AppCompatActivity() {
         }
     }
 
-    @Suppress("DEPRECATION")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -113,31 +110,42 @@ class MapActivity : AppCompatActivity() {
             map
         )
 
+        val arrowDrawable = ContextCompat.getDrawable(
+            this,
+            android.R.drawable.arrow_up_float
+        )
+
+        if (arrowDrawable != null) {
+            val arrowBitmap = drawableToBitmapScaled(arrowDrawable, 4.5f)
+            locationOverlay.setPersonIcon(arrowBitmap)
+            locationOverlay.setDirectionIcon(arrowBitmap)
+        }
+
+        locationOverlay.isDrawAccuracyEnabled = false
         locationOverlay.enableMyLocation()
         locationOverlay.enableFollowLocation()
+
         map.overlays.add(locationOverlay)
 
         locationOverlay.runOnFirstFix {
             runOnUiThread {
                 val actual = locationOverlay.myLocation ?: return@runOnUiThread
                 map.controller.setCenter(actual)
-                drawRoute(actual, destino)
-                actualizarInfo(actual)
+                drawRoute(actual, DESTINO)
                 startLocationUpdates()
             }
         }
     }
 
     // --------------------------------------------------
-    // ACTUALIZACIONES CONTINUAS (FORMA CORRECTA)
+    // ACTUALIZACIONES
     // --------------------------------------------------
     private fun startLocationUpdates() {
         handler.postDelayed(object : Runnable {
             override fun run() {
                 val actual = locationOverlay.myLocation
                 if (actual != null) {
-                    actualizarInfo(actual)
-                    comprobarDesvio(actual)
+                    comprobarLlegada(actual)
                 }
                 handler.postDelayed(this, updateInterval)
             }
@@ -145,17 +153,17 @@ class MapActivity : AppCompatActivity() {
     }
 
     // --------------------------------------------------
-    // MARCADOR DESTINO
+    // MARCADOR
     // --------------------------------------------------
-    private fun addDestinationMarker(point: GeoPoint, title: String) {
+    private fun addDestinationMarker(point: GeoPoint) {
         val marker = Marker(map)
         marker.position = point
-        marker.title = title
+        marker.title = "Destino"
         map.overlays.add(marker)
     }
 
     // --------------------------------------------------
-    // RUTA (API OSRM)
+    // RUTA + TIEMPO + DISTANCIA
     // --------------------------------------------------
     private fun drawRoute(start: GeoPoint, end: GeoPoint) {
 
@@ -164,79 +172,82 @@ class MapActivity : AppCompatActivity() {
                 "${end.longitude},${end.latitude}" +
                 "?overview=full&geometries=geojson"
 
-        val request = Request.Builder().url(url).build()
+        OkHttpClient().newCall(request = Request.Builder().url(url).build())
+            .enqueue(object : Callback {
 
-        OkHttpClient().newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {}
 
-            override fun onFailure(call: Call, e: IOException) {}
+                override fun onResponse(call: Call, response: Response) {
+                    val body = response.body?.string() ?: return
+                    val json = JSONObject(body)
 
-            override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string() ?: return
-                val json = JSONObject(body)
+                    val routes = json.optJSONArray("routes") ?: return
+                    if (routes.length() == 0) return
 
-                val route = json.getJSONArray("routes").getJSONObject(0)
-                val coords = route.getJSONObject("geometry").getJSONArray("coordinates")
-                val durationMin = (route.getDouble("duration") / 60).roundToInt()
+                    val route = routes.getJSONObject(0)
+                    val coords = route.getJSONObject("geometry").getJSONArray("coordinates")
 
-                val points = ArrayList<GeoPoint>()
-                for (i in 0 until coords.length()) {
-                    val c = coords.getJSONArray(i)
-                    points.add(GeoPoint(c.getDouble(1), c.getDouble(0)))
-                }
+                    val tiempoSeg = route.getDouble("duration")
+                    val tiempoMin =
+                        ((tiempoSeg * FACTOR_MAYOR) / 60).roundToInt()
 
-                runOnUiThread {
-                    rutaActual?.let { map.overlays.remove(it) }
+                    val distanciaMetros =
+                        route.getDouble("distance").roundToInt()
 
-                    rutaActual = Polyline().apply {
-                        setPoints(points)
+                    val points = ArrayList<GeoPoint>()
+                    for (i in 0 until coords.length()) {
+                        val c = coords.getJSONArray(i)
+                        points.add(GeoPoint(c.getDouble(1), c.getDouble(0)))
                     }
 
-                    map.overlays.add(rutaActual)
-                    txtTiempo.text = "Tiempo estimado: $durationMin min"
-                    map.invalidate()
+                    runOnUiThread {
+                        rutaActual?.let { map.overlays.remove(it) }
+
+                        rutaActual = Polyline().apply {
+                            setPoints(points)
+                        }
+
+                        map.overlays.add(rutaActual)
+
+                        txtTiempo.text =
+                            "Tiempo estimado: unos $tiempoMin minutos"
+
+                        txtDistancia.text =
+                            "Distancia restante: $distanciaMetros m"
+
+                        map.invalidate()
+                    }
                 }
-            }
-        })
+            })
     }
 
     // --------------------------------------------------
-    // DISTANCIA + LLEGADA
+    // LLEGADA
     // --------------------------------------------------
-    private fun actualizarInfo(actual: GeoPoint) {
-        val metros = actual.distanceToAsDouble(destino).roundToInt()
-
-        if (metros > 20) {
-            txtDistancia.text = "Distancia restante: $metros m"
-        } else if (!yaHaLlegado) {
+    private fun comprobarLlegada(actual: GeoPoint) {
+        if (actual.distanceToAsDouble(DESTINO) < 20 && !yaHaLlegado) {
             yaHaLlegado = true
-            txtDistancia.text = "🏁 ¡Has llegado!"
-            vibrar()
+            txtTiempo.text = "🏁 Has llegado"
+            txtDistancia.text = ""
         }
     }
 
-    private fun vibrar() {
-        val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
-        vibrator.vibrate(
-            VibrationEffect.createOneShot(
-                600,
-                VibrationEffect.DEFAULT_AMPLITUDE
-            )
-        )
+    // --------------------------------------------------
+    // UTILIDADES
+    // --------------------------------------------------
+    private fun drawableToBitmapScaled(drawable: Drawable, scale: Float): Bitmap {
+        val w = (drawable.intrinsicWidth * scale).toInt()
+        val h = (drawable.intrinsicHeight * scale).toInt()
+        val bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        drawable.setBounds(0, 0, w, h)
+        drawable.draw(canvas)
+        return bitmap
     }
 
-    // --------------------------------------------------
-    // RECALCULAR SI TE SALES
-    // --------------------------------------------------
-    private fun comprobarDesvio(actual: GeoPoint) {
-        val ruta = rutaActual ?: return
-
-        val distanciaARuta = ruta.points.minOf {
-            it.distanceToAsDouble(actual)
-        }
-
-        if (distanciaARuta > 50) {
-            drawRoute(actual, destino)
-        }
+    override fun onPause() {
+        super.onPause()
+        handler.removeCallbacksAndMessages(null)
     }
 
     override fun onDestroy() {
