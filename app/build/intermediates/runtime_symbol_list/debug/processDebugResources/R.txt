@@ -3573,6 +3573,8 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f07007f
 int drawable btn_radio_on_mtrl 0x7f070080
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070081
 int drawable button_apuntate_background 0x7f070082
+int drawable button_senderismo_background 0x7f070104
+int drawable card_background 0x7f070105
 int drawable common_full_open_on_phone 0x7f070083
 int drawable common_google_signin_btn_icon_dark 0x7f070084
 int drawable common_google_signin_btn_icon_dark_focused 0x7f070085
@@ -3815,6 +3817,8 @@ int id browser_actions_menu_item_text 0x7f08006d
 int id browser_actions_menu_items 0x7f08006e
 int id browser_actions_menu_view 0x7f08006f
 int id btnApuntate 0x7f080070
+int id btnEjercicios 0x7f080224
+int id btnSenderismo 0x7f080225
 int id buttonLogin 0x7f080071
 int id buttonPanel 0x7f080072
 int id cache_measures 0x7f080074
@@ -4221,6 +4225,10 @@ int id transition_position 0x7f080204
 int id transition_scene_layoutid_cache 0x7f080205
 int id transition_transform 0x7f080206
 int id triangle 0x7f080207
+int id txtEdad 0x7f080226
+int id txtNombre 0x7f080227
+int id txtPatologias 0x7f080228
+int id txtRacha 0x7f080229
 int id unchecked 0x7f080208
 int id uniform 0x7f080209
 int id unlabeled 0x7f08020a
@@ -4367,7 +4375,9 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_login 0x7f0b001c
+int layout activity_perfil 0x7f0b0073
 int layout activity_portada 0x7f0b001d
+int layout activity_rutina 0x7f0b0074
 int layout activity_senderismo 0x7f0b001e
 int layout browser_actions_context_menu_page 0x7f0b001f
 int layout browser_actions_context_menu_row 0x7f0b0020
@@ -4489,7 +4499,6 @@ int string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL 0x7f10001c
 int string androidx_startup 0x7f10001d
 int string app_name 0x7f10001e
 int string appbar_scrolling_view_behavior 0x7f10001f
-int string apuntate 0x7f100020
 int string bottom_sheet_behavior 0x7f100021
 int string bottomsheet_action_collapse 0x7f100022
 int string bottomsheet_action_expand 0x7f100023
@@ -4654,6 +4663,7 @@ int string path_password_eye_mask_strike_through 0x7f1000c1
 int string path_password_eye_mask_visible 0x7f1000c2
 int string path_password_strike_through 0x7f1000c3
 int string project_id 0x7f1000c4
+int string ruta 0x7f1000ce
 int string search_menu_title 0x7f1000c5
 int string searchbar_scrolling_view_behavior 0x7f1000c6
 int string searchview_clear_text_content_description 0x7f1000c7
