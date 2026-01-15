@@ -1,4 +1,4 @@
-package tu.paquete.aqui
+package com.example.mayoresfitmakers.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
-import com.example.mayoresfitmakers.ui.DocumentosLegalesActivity
-import com.example.mayoresfitmakers.ui.EventosActivity
-import com.example.mayoresfitmakers.ui.PerfilActivity
-import com.example.mayoresfitmakers.ui.SeleccionEjercicioActivity
-import com.example.mayoresfitmakers.ui.SenderismoActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 
