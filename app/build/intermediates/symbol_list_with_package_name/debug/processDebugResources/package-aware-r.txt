@@ -3874,13 +3874,6 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
-id cardActividades
-id cardCalendario
-id cardEventos
-id cardPerfil
-id cardRecompensa
-id cardRutas
-id cardRutina
 id carryVelocity
 id center
 id centerCrop
@@ -4004,7 +3997,6 @@ id honorRequest
 id horizontal
 id horizontal_only
 id icon
-id iconActividades
 id icon_group
 id icon_only
 id ifRoom
@@ -4012,10 +4004,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imgCloud
 id imgEvento
-id imgLogo
-id imgPersona
 id immediateStop
 id included
 id indeterminate
@@ -4172,7 +4161,6 @@ id right
 id rightToLeft
 id right_icon
 id right_side
-id rootMenu
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -4300,8 +4288,6 @@ id txtLugar
 id txtNombre
 id txtPatologias
 id txtRacha
-id txtSaludo
-id txtSubtitulo
 id txtTiempo
 id txtTipo
 id unchecked
@@ -4452,9 +4438,7 @@ layout abc_tooltip
 layout activity_activadades
 layout activity_eventos
 layout activity_login
-layout activity_main_menu
 layout activity_map
-layout activity_menu
 layout activity_perfil
 layout activity_portada
 layout activity_recompensa

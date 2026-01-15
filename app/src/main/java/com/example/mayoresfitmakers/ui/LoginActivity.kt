@@ -10,6 +10,7 @@ import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.datos.repositorio.infraestructura.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
 import com.example.mayoresfitmakers.modelo.Usuario
+import com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
 import com.google.android.material.button.MaterialButton
 
 class LoginActivity : AppCompatActivity() {
@@ -129,7 +130,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navegarMenu() {
         Log.d("LOGIN", "Navegando a PortadaActivity")
-        startActivity(Intent(this, MenuActivity::class.java))
+        startActivity(Intent(this, ActividadesActivity::class.java))
         finish()
     }
 }

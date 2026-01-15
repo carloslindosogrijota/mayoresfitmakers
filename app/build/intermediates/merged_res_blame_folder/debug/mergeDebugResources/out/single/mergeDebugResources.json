@@ -28,10 +28,6 @@
         "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\item_evento.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-51:/layout_activity_menu.xml.flat",
-        "source": "com.example.mayoresfitmakers.app-main-53:/layout/activity_menu.xml"
-    },
-    {
         "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_card_blue.xml.flat",
         "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\card_blue.xml"
     },
@@ -96,12 +92,12 @@
         "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\card_green.xml"
     },
     {
-        "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_header_background.xml.flat",
-        "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\header_background.xml"
-    },
-    {
         "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_menu.xml.flat",
         "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_header_background.xml.flat",
+        "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\header_background.xml"
     },
     {
         "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-anydpi_ic_launcher_round.xml.flat",
@@ -146,6 +142,10 @@
     {
         "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-51:/layout_activity_perfil.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-53:/layout/activity_perfil.xml"
     },
     {
         "merged": "C:\\Users\\davga\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_item_senderismo.xml.flat",
