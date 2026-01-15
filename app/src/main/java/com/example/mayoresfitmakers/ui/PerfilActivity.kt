@@ -53,10 +53,14 @@ class PerfilActivity : AppCompatActivity() {
                         val patologiasList = document.get("patologias") as? List<Map<String, Any>> ?: emptyList()
                         val patologias = patologiasList.mapNotNull { map ->
                             try {
+                                val id = map["id"]?.toString()
+                                val afecion = map["tipo"]?.toString() ?: ""
+                                val descripcion = map["lugar"]?.toString() ?: ""
+
                                 Patologia(
-                                    id = (map["id"] as? Long)?.toInt() ?: 0,
-                                    tipo = map["tipo"] as? String ?: "",
-                                    lugar = map["lugar"] as? String ?: ""
+                                    id = id,
+                                    afecion = afecion,
+                                    descripcion = descripcion
                                 )
                             } catch (e: Exception) {
                                 null
@@ -75,7 +79,7 @@ class PerfilActivity : AppCompatActivity() {
                             txtPatologias.text = "Ninguna registrada"
                         } else {
                             txtPatologias.text = patologias.joinToString("\n") {
-                                "• ${it.tipo} - ${it.lugar}"
+                                "• ${it.afecion} - ${it.descripcion}"
                             }
                         }
                     } else {

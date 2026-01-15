@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.firebase.R
+import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Senderismo
 
 
