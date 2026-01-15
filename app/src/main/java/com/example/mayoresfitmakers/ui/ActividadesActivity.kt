@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.databinding.ActivityMisActividadesBinding
+import com.example.mayoresfitmakers.ui.EventosActivity
 import com.example.mayoresfitmakers.ui.SenderismoActivity
 
 class ActividadesActivity : AppCompatActivity() {
@@ -32,11 +33,11 @@ class ActividadesActivity : AppCompatActivity() {
 
 
         binding.cardEjerciciosSuaves.setOnClickListener {
-            // TODO: Intent a RutinaActivity con extra tipo = "suave"
         }
 
         binding.cardEstiramientos.setOnClickListener {
-            // TODO: Intent a RutinaActivity con extra tipo = "estiramiento"
+            val intent = Intent(this, EventosActivity::class.java)
+            startActivity(intent)
         }
     }
 

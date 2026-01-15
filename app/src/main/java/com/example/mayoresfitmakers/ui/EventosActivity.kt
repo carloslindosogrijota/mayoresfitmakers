@@ -8,10 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mayoresfitmakers.R
-import com.example.mayoresfitmakers.datos.repositorio.EventoRepository
 import com.example.mayoresfitmakers.modelo.Evento
 import com.example.mayoresfitmakers.ui.adapter.EventosAdapter
-import com.google.firebase.firestore.ListenerRegistration
 
 class EventosActivity : AppCompatActivity() {
 
@@ -21,9 +19,6 @@ class EventosActivity : AppCompatActivity() {
     private lateinit var adapter: EventosAdapter
     private val eventos: MutableList<Evento> = mutableListOf()
 
-    private val repository: EventoRepository = EventoRepository()
-    private var listenerRegistration: ListenerRegistration? = null
-
     private var currentPosition: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,29 +26,9 @@ class EventosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_eventos)
 
         initializeViews()
+        loadEventos()
         setupRecyclerView()
         setupListeners()
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        listenerRegistration = repository.listenEventos(
-            onData = { lista ->
-                eventos.clear()
-                eventos.addAll(lista)
-                adapter.updateList(eventos)
-            },
-            onError = { ex ->
-                Toast.makeText(this, "Error cargando eventos: ${ex.message}", Toast.LENGTH_SHORT).show()
-            }
-        )
-    }
-
-    override fun onStop() {
-        super.onStop()
-        listenerRegistration?.remove()
-        listenerRegistration = null
     }
 
     private fun initializeViews() {
@@ -61,8 +36,37 @@ class EventosActivity : AppCompatActivity() {
         btnApuntate = findViewById(R.id.btnApuntate)
     }
 
+    private fun loadEventos() {
+        eventos.clear()
+
+        eventos.add(
+            Evento(
+                id = "1",
+                tipo = "Caminata guiada",
+                lugar = "Parque Central",
+                imageResId = R.drawable.imagencuartaruta
+            )
+        )
+        eventos.add(
+            Evento(
+                id = "2",
+                tipo = "Estiramientos",
+                lugar = "Centro de mayores",
+                imageResId = R.drawable.imagenprimeraruta
+            )
+        )
+        eventos.add(
+            Evento(
+                id = "3",
+                tipo = "Senderismo suave",
+                lugar = "Ruta del lago",
+                imageResId = R.drawable.imagensegundaruta
+            )
+        )
+    }
+
     private fun setupRecyclerView() {
-        val layoutManager: LinearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = layoutManager
 
         adapter = EventosAdapter(eventos) { evento ->
@@ -70,14 +74,14 @@ class EventosActivity : AppCompatActivity() {
         }
         recyclerView.adapter = adapter
 
-        val snapHelper: PagerSnapHelper = PagerSnapHelper()
+        val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(recyclerView)
 
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    val position: Int = layoutManager.findFirstVisibleItemPosition()
-                    if (position != currentPosition) {
+                    val position = layoutManager.findFirstVisibleItemPosition()
+                    if (position != currentPosition && position >= 0) {
                         currentPosition = position
                     }
                 }
@@ -92,10 +96,8 @@ class EventosActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val eventoSeleccionado: Evento = eventos[currentPosition]
-            Toast.makeText(this, "Apuntarte a: ${eventoSeleccionado.tipo}", Toast.LENGTH_SHORT).show()
-
-            // Aquí luego conectas tu lógica real (guardar inscripción, navegar, etc.)
+            val eventoSeleccionado = eventos[currentPosition]
+            Toast.makeText(this, "Te apuntaste a: ${eventoSeleccionado.tipo}", Toast.LENGTH_SHORT).show()
         }
     }
 }

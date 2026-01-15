@@ -15,7 +15,7 @@ class EventoRepository {
         val data: Map<String, Any> = mapOf(
             "tipo" to evento.tipo,
             "lugar" to evento.lugar,
-            "imagen" to evento.imagen
+            "imagen" to evento.imageResId
         )
 
         collection.document(id).set(data)
@@ -24,7 +24,7 @@ class EventoRepository {
     }
 
     fun updateEvento(evento: Evento, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
-        val id: String = evento.id ?: ""
+        val id: String = evento.id
         if (id.isBlank()) {
             onFailure(IllegalArgumentException("El id del evento está vacío"))
             return
@@ -33,7 +33,7 @@ class EventoRepository {
         val data: Map<String, Any> = mapOf(
             "tipo" to evento.tipo,
             "lugar" to evento.lugar,
-            "imagen" to evento.imagen
+            "imagen" to evento.imageResId
         )
 
         collection.document(id).update(data)
@@ -63,13 +63,16 @@ class EventoRepository {
                 for (doc in snapshot.documents) {
                     val tipo: String = doc.getString("tipo") ?: ""
                     val lugar: String = doc.getString("lugar") ?: ""
-                    val imagen: String = doc.getString("imagen") ?: ""
+
+                    // ✅ Como guardas un Int, Firestore lo devuelve como Long/Number
+                    val imagenLong: Long = doc.getLong("imagen") ?: 0L
+                    val imagenInt: Int = imagenLong.toInt()
 
                     val evento = Evento(
                         id = doc.id,
                         tipo = tipo,
                         lugar = lugar,
-                        imagen = imagen
+                        imageResId = imagenInt
                     )
 
                     lista.add(evento)
