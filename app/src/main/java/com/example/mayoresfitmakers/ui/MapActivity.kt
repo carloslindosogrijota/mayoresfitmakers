@@ -1,4 +1,4 @@
-package com.example.mayoresfitmakers
+package com.example.mayoresfitmakers.ui
 
 import android.Manifest
 import android.content.pm.PackageManager

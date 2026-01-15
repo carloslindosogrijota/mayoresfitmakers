@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="24dp"
     android:background="#F5F5F5">
 
@@ -22,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:text="Apúntate"
+            app:backgroundTint="@color/verde_oscuro"
             android:textAllCaps="false"
             android:layout_marginTop="16dp" />
 

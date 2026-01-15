@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center">
@@ -21,9 +22,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-        <Button android:id="@+id/btnFuerza" android:text="💪 FUERZA" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"/>
-        <Button android:id="@+id/btnAerobico" android:text="❤️ AERÓBICO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"/>
-        <Button android:id="@+id/btnEstirar" android:text="🧘 ESTIRAR" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp"/>
+        <Button android:id="@+id/btnFuerza"  android:text="💪 FUERZA" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"
+            app:backgroundTint="@color/verde_oscuro"
+            />
+        <Button android:id="@+id/btnAerobico" android:text="❤️ AERÓBICO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"             app:backgroundTint="@color/verde_oscuro"
+            />
+        <Button android:id="@+id/btnEstirar" android:text="🧘 ESTIRAR" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp"            app:backgroundTint="@color/verde_oscuro"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -35,9 +40,12 @@
 
         <TextView android:text="¿Cuánto tiempo tienes?" android:textSize="32sp" android:textStyle="bold" android:textColor="@color/black" android:layout_marginBottom="30dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-        <Button android:id="@+id/btn10min" android:text="⏱️ 10 MINUTOS" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"/>
-        <Button android:id="@+id/btn20min" android:text="⏱️ 20 MINUTOS" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"/>
-        <Button android:id="@+id/btn30min" android:text="⏱️ 30 MINUTOS" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp"/>
+        <Button android:id="@+id/btn10min" android:text="⏱️ 10 MINUTOS" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"            app:backgroundTint="@color/verde_oscuro"
+            />
+        <Button android:id="@+id/btn20min" android:text="⏱️ 20 MINUTOS" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"            app:backgroundTint="@color/verde_oscuro"
+            />
+        <Button android:id="@+id/btn30min" android:text="⏱️ 30 MINUTOS" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp"            app:backgroundTint="@color/verde_oscuro"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -47,11 +55,15 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <TextView android:text="¿Qué nivel prefieres?" android:textSize="32sp" android:textStyle="bold" android:textColor="@color/black" android:layout_marginBottom="30dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:text="¿Qué nivel prefieres?" android:textSize="32sp" android:textStyle="bold" android:textColor="@color/black" android:layout_marginBottom="30dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content"            app:backgroundTint="@color/verde_oscuro"
+            />
 
-        <Button android:id="@+id/btnBajo" android:text="🐢 BAJO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"/>
-        <Button android:id="@+id/btnMedio" android:text="🐇 MEDIO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"/>
-        <Button android:id="@+id/btnAlto" android:text="🐆 AVANZADO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp"/>
+        <Button android:id="@+id/btnBajo" android:text="🐢 BAJO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"            app:backgroundTint="@color/verde_oscuro"
+            />
+        <Button android:id="@+id/btnMedio" android:text="🐇 MEDIO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginBottom="16dp"            app:backgroundTint="@color/verde_oscuro"
+            />
+        <Button android:id="@+id/btnAlto" android:text="🐆 AVANZADO" android:textSize="24sp" android:layout_width="match_parent" android:layout_height="80dp"            app:backgroundTint="@color/verde_oscuro"
+            />
     </LinearLayout>
 
 </LinearLayout>

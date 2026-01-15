@@ -10,7 +10,6 @@ import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.datos.repositorio.infraestructura.AutenticacionRepository
 import com.example.mayoresfitmakers.datos.repositorio.PerfilUsuarioRepository
 import com.example.mayoresfitmakers.modelo.Usuario
-import com.example.mayoresfitmakers.ui.actividades.ActividadesActivity
 import com.google.android.material.button.MaterialButton
 
 class LoginActivity : AppCompatActivity() {

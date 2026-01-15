@@ -1,5 +1,6 @@
 package com.example.mayoresfitmakers.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,8 @@ class SenderismoActivity : AppCompatActivity() {
 
         // Por ahora el botón no hace nada
         btnApuntate.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
             // Implementar acción
         }
     }

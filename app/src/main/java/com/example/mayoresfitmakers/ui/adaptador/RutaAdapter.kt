@@ -4,9 +4,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mayoresfitmakers.ui.MapActivity
 import com.example.mayoresfitmakers.databinding.ItemRutaBinding
 import com.example.mayoresfitmakers.modelo.Ruta
-import com.example.mayoresfitmakers.ui.MapActivity
+
 
 class RutaAdapter(
     private val rutas: List<Ruta>

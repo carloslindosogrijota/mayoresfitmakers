@@ -1,5 +1,6 @@
 package com.example.mayoresfitmakers.ui
 
+import android.content.Intent
 import com.example.mayoresfitmakers.ui.adaptador.EjerciciosAdapter
 import android.os.Bundle
 import android.widget.Button
@@ -48,6 +49,7 @@ class ReproductorRutinaActivity : AppCompatActivity() {
 
         // Botón salir
         findViewById<Button>(R.id.btnFinalizar).setOnClickListener {
+            startActivity(Intent(this, ActividadesActivity::class.java))
             finish() // Cierra la actividad y vuelve atrás
         }
     }
