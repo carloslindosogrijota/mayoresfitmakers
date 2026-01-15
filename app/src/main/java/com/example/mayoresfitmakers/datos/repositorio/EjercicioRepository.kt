@@ -5,64 +5,56 @@ import kotlinx.coroutines.delay
 
 class EjercicioRepository {
 
-    // NO USAMOS FIREBASE AHORA
-    // private val db = FirebaseFirestore.getInstance()
+    // Simular llamada a internet (se puede quitar el delay si quieres que sea instantáneo)
+    suspend fun obtenerRutinaPersonalizada(tipo: String, nivel: String, tiempo: Int): List<Ejercicio> {
+        // Simulamos una pequeña espera para que parezca real
+        delay(500)
 
-    suspend fun obtenerRutinaPersonalizada(tipo: String, nivel: String, tiempoTotalMinutos: Int): List<Ejercicio> {
+        val listaGenerada = ArrayList<Ejercicio>()
 
-        // 1. Simulamos una carga de red (opcional, para ver si sale el spinner o carga rápido)
-        delay(500) // medio segundo de espera falsa
+        // Generamos ejercicios "fake" pero bonitos según lo que haya pedido el usuario
+        val categoria = tipo.uppercase()
 
-        // 2. CREAMOS NUESTRA BASE DE DATOS FALSA AQUÍ MISMO
-        val baseDeDatosFalsa = listOf(
-            // --- FUERZA / BAJO ---
-            Ejercicio("Levantamiento Silla", "Siéntate y levántate despacio", "fuerza", "bajo", "", 60),
-            Ejercicio("Bíceps con Botella", "Usa una botella de agua como pesa", "fuerza", "bajo", "", 60),
-            Ejercicio("Prtes Pared", "Flexiones apoyado en la pared", "fuerza", "bajo", "", 60),
-            Ejercicio("Elevación Lateral", "Levanta los brazos en cruz", "fuerza", "bajo", "", 60),
+        // EJERCICIO 1
+        listaGenerada.add(Ejercicio(
+            tipo = tipo,
+            nivel = nivel,
+            duracionTexto = "5 min",
+            nombre = "Calentamiento: $categoria",
+            descripcion = "Empezamos moviendo las articulaciones suavemente. Respira hondo y prepárate.",
+            id = "mock1"
+        ))
 
-            // --- FUERZA / MEDIO ---
-            Ejercicio("Sentadilla Profunda", "Baja hasta abajo", "fuerza", "medio", "", 60),
-            Ejercicio("Plancha Abdominal", "Aguanta recto 30 seg", "fuerza", "medio", "", 60),
+        // EJERCICIO 2
+        listaGenerada.add(Ejercicio(
+            tipo = tipo,
+            nivel = nivel,
+            duracionTexto = "10 min",
+            nombre = "Ejercicio Principal 1",
+            descripcion = "Mantén la espalda recta. Sigue el ritmo del vídeo sin forzar. Si te cansas, para.",
+            id = "mock2"
+        ))
 
-            // --- AEROBICO / BAJO ---
-            Ejercicio("Marcha en el sitio", "Camina sin moverte", "aerobico", "bajo", "", 60),
-            Ejercicio("Pasos laterales", "Un paso a la derecha, otro a la izquierda", "aerobico", "bajo", "", 60),
+        // EJERCICIO 3
+        listaGenerada.add(Ejercicio(
+            tipo = tipo,
+            nivel = nivel,
+            duracionTexto = "10 min",
+            nombre = "Ejercicio Principal 2",
+            descripcion = "Ahora aumentamos un poco la intensidad. Recuerda beber agua si lo necesitas.",
+            id = "mock3"
+        ))
 
-            // --- ESTIRAR / BAJO ---
-            Ejercicio("Estirar Cuello", "Mueve la cabeza suavemente", "estirar", "bajo", "", 60),
-            Ejercicio("Abrazo al pecho", "Lleva la rodilla al pecho", "estirar", "bajo", "", 60)
-        )
+        // EJERCICIO 4
+        listaGenerada.add(Ejercicio(
+            tipo = tipo,
+            nivel = nivel,
+            duracionTexto = "5 min",
+            nombre = "Vuelta a la calma",
+            descripcion = "Terminamos con movimientos lentos para relajar los músculos. ¡Buen trabajo!",
+            id = "mock4"
+        ))
 
-        // 3. FILTRAMOS MANUALMENTE (Lo que antes hacía Firebase con 'whereEqualTo')
-        // Buscamos en la lista falsa los que coincidan con lo que pidió el usuario
-        val ejerciciosFiltrados = baseDeDatosFalsa.filter {
-            it.tipo == tipo && it.nivel == nivel
-        }
-
-        // 4. ALGORITMO DE TIEMPO (Igual que antes)
-        val rutinaGenerada = ArrayList<Ejercicio>()
-        var tiempoAcumulado = 0
-        val tiempoTotalSegundos = tiempoTotalMinutos * 60
-
-        // Si no encontramos nada, devolvemos lista vacía
-        if (ejerciciosFiltrados.isEmpty()) return emptyList()
-
-        // Barajamos y rellenamos hasta completar el tiempo
-        // Usamos un bucle infinito (while) para repetir ejercicios si la lista es corta
-        // hasta llenar el tiempo del usuario.
-        while (tiempoAcumulado < tiempoTotalSegundos) {
-            for (ejercicio in ejerciciosFiltrados.shuffled()) {
-                if (tiempoAcumulado + ejercicio.duracionSegundos <= tiempoTotalSegundos) {
-                    rutinaGenerada.add(ejercicio)
-                    tiempoAcumulado += ejercicio.duracionSegundos
-                }
-                if (tiempoAcumulado >= tiempoTotalSegundos) break
-            }
-            // Seguridad para no colgarse si no hay ejercicios que quepan
-            if (rutinaGenerada.isEmpty()) break
-        }
-
-        return rutinaGenerada
+        return listaGenerada
     }
 }
