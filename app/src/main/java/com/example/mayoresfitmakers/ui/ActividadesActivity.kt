@@ -8,11 +8,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
+import com.example.mayoresfitmakers.ui.base.BaseFallDetectionActivity
 import com.example.mayoresfitmakers.ui.descuento.DescuentoActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 
-class ActividadesActivity : AppCompatActivity() {
+class ActividadesActivity : BaseFallDetectionActivity() {
 
     private lateinit var botonVolver: ImageView
     private lateinit var textoTituloPantalla: TextView

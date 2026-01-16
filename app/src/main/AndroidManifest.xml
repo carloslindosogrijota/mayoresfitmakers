@@ -74,6 +74,11 @@
             android:name=".ui.descuento.DescuentoActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".ui.CheckCaidaActivity"
+            android:exported="false" />
+
+
 
     </application>
 
