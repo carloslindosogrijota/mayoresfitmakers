@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mayoresfitmakers.R
+import com.example.mayoresfitmakers.ui.descuento.DescuentoActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 
@@ -25,6 +26,11 @@ class ActividadesActivity : AppCompatActivity() {
 
     private lateinit var botonDocumentosLegales: MaterialButton
 
+    // LOGROS
+    private lateinit var cardLogros: MaterialCardView
+    private lateinit var txtSaludoLogro: TextView
+    private lateinit var txtUltimoLogro: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,7 +44,11 @@ class ActividadesActivity : AppCompatActivity() {
         configurarHeader()
 
         // 4) Listeners
+        configurarContenidoHardcodeado()
         configurarListeners()
+
+
+
     }
 
     private fun enlazarVistas() {
@@ -53,6 +63,19 @@ class ActividadesActivity : AppCompatActivity() {
         cardEstiramientos = findViewById(R.id.cardEstiramientos)
 
         botonDocumentosLegales = findViewById(R.id.btnDocumentosLegales)
+
+        // LOGROS
+        cardLogros = findViewById(R.id.cardLogros)
+        txtSaludoLogro = findViewById(R.id.txtSaludoLogro)
+        txtUltimoLogro = findViewById(R.id.txtUltimoLogro)
+    }
+
+    private fun configurarContenidoHardcodeado() {
+        val puntos = 120
+        val logro = "¡Desbloqueaste un 10% de descuento!"
+
+        txtSaludoLogro.text = "¡Felicidades!"
+        txtUltimoLogro.text = "Tienes $puntos puntos. $logro"
     }
 
     private fun configurarHeader() {
@@ -98,6 +121,20 @@ class ActividadesActivity : AppCompatActivity() {
             }
         })
 
+        cardLogros.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val texto = txtUltimoLogro.text.toString()
+
+                // Opcional: solo abrir si hay descuento
+                if (texto.contains("10%")) {
+                    val intent = Intent(this@ActividadesActivity, DescuentoActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+        })
+
+
+
         botonDocumentosLegales.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 // TODO: Cambia DocumentosLegalesActivity por tu activity real
@@ -105,5 +142,6 @@ class ActividadesActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         })
+
     }
 }

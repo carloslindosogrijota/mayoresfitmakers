@@ -70,6 +70,11 @@
             android:name=".ui.ReproductorRutinaActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".ui.descuento.DescuentoActivity"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>
