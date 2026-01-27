@@ -24,11 +24,8 @@ import java.io.IOException
 import kotlin.math.roundToInt
 
 class MapActivity : AppCompatActivity() {
-
-    // 📍 Destino hardcodeado
     private val DESTINO = GeoPoint(40.4469, -3.9990)
 
-    // ⏱️ FACTOR REALISTA PARA PERSONAS MAYORES
     private val FACTOR_MAYOR = 3.0
 
     private lateinit var map: MapView

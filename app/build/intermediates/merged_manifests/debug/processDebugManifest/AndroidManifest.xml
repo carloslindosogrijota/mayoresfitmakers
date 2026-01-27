@@ -9,6 +9,9 @@
         android:targetSdkVersion="36" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
@@ -51,12 +54,6 @@
         android:theme="@style/Theme.Mayoresfitmakers" >
         <activity
             android:name="com.example.mayoresfitmakers.PortadaActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.mayoresfitmakers.ui.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.mayoresfitmakers.ui.SeleccionEjercicioActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -64,7 +61,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.mayoresfitmakers.ui.ReproductorRutinaActivity" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.EventosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.SenderismoActivity"
+            android:exported="false" />
+        <activity android:name="com.example.mayoresfitmakers.ui.ActividadesActivity" />
+        <activity android:name="com.example.mayoresfitmakers.ui.recompensa.RecompensaActivity" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.RGPDActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.CookiesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.ModelosLegalesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.AnalisisLegalActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.CesionImagenActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.ConsentimientoGrabacionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.DocumentosLegalesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.SeleccionEjercicioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.ReproductorRutinaActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.descuento.DescuentoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mayoresfitmakers.ui.CheckCaidaActivity"
+            android:exported="false" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"

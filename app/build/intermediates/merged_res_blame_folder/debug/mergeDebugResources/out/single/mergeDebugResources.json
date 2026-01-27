@@ -1,242 +1,278 @@
 [
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_login.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_senderismo.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_senderismo.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_documentos_legales.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_documentos_legales.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_mis_actividades.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_mis_actividades.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-anydpi\\ic_launcher_round.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_ejercicios.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_ejercicios.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_item_ruta.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/item_ruta.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\xml\\backup_rules.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_button_senderismo_background.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\button_senderismo_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_person.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_person.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_documentos_legales.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_documentos_legales.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_ejercicios.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_ejercicios.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-51:/drawable_img2.jpg.flat",
-        "source": "com.example.mayoresfitmakers.app-main-53:/drawable/img2.jpg"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_cesion_imagen.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_cesion_imagen.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_perfil.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_perfil.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_item_ruta.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\item_ruta.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_item_ejercicio.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/item_ejercicio.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_chevron_right.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_chevron_right.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_caminar.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_caminar.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_check_circle.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_check_circle.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_modelos_legales.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_modelos_legales.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_consentimiento_grabacion.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_consentimiento_grabacion.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_login.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_green.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_green.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_item_ejercicio.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\item_ejercicio.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_imagenterceraruta.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/imagenterceraruta.png"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_estiramientos.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_estiramientos.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_bg_senderismo_card.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/bg_senderismo_card.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_img2.jpg.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/img2.jpg"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_card_blue.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\card_blue.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_imagencuartaruta.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/imagencuartaruta.png"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_person.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_person.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_portada.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_portada.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-anydpi/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_recompensa.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_recompensa.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_item_evento.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/item_evento.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_seleccion_ejercicio.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_seleccion_ejercicio.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/xml_backup_rules.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_error.png.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\error.png"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_img1.jpg.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/img1.jpg"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_cesion_imagen.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_cesion_imagen.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_imagensegundaruta.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/imagensegundaruta.png"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-51:/drawable_img3.jpg.flat",
-        "source": "com.example.mayoresfitmakers.app-main-53:/drawable/img3.jpg"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_eventos.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_eventos.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_item_evento.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\item_evento.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_header_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/header_background.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_card_background.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\card_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_button_apuntate_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/button_apuntate_background.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-51:/drawable_img1.jpg.flat",
-        "source": "com.example.mayoresfitmakers.app-main-53:/drawable/img1.jpg"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_bg_menu_gradient.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/bg_menu_gradient.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_card_orange.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\card_orange.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_cookies.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_cookies.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_reproductor_rutina.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_reproductor_rutina.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_analisis_legal.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_analisis_legal.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_eventos.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_eventos.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_modelos_legales.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_modelos_legales.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_activadades.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_activadades.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_qr_descuento.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/qr_descuento.png"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_caminar.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_caminar.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_check_circle.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_check_circle.xml"
     },
     {
-        "merged": "com.example.mayoresfitmakers.app-debug-51:/drawable_img4.jpg.flat",
-        "source": "com.example.mayoresfitmakers.app-main-53:/drawable/img4.jpg"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_imagenquintaruta.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/imagenquintaruta.png"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_arrow_back.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_arrow_back.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_reproductor_rutina.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_reproductor_rutina.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_imagenprimeraruta.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/imagenprimeraruta.png"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_logo.png.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\logo.png"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_senderismo.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_senderismo.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-anydpi/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_rgpd.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_rgpd.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_bg_menu_gradient.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\bg_menu_gradient.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_home.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_home.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_header_background.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\header_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_estiramientos.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_estiramientos.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_consentimiento_grabacion.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_consentimiento_grabacion.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_perfil.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_perfil.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_img4.jpg.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/img4.jpg"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_map.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_map.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_error.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/error.png"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_card_green.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\card_green.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_activadades.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_activadades.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_analisis_legal.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_analisis_legal.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_chevron_right.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_chevron_right.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_portada.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_portada.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_arrow_back.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_arrow_back.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_button_senderismo_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/button_senderismo_background.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_activity_cookies.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\activity_cookies.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_background.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_button_apuntate_background.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\button_apuntate_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_check_caida_activity.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/check_caida_activity.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_descuento.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_descuento.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\drawable_ic_home.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\drawable\\ic_home.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\layout_item_senderismo.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\layout\\item_senderismo.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_blue.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_blue.xml"
     },
     {
-        "merged": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-debug-51:\\mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Trabajo\\.gradle\\daemon\\8.13\\com.example.mayoresfitmakers.app-main-53:\\mipmap-anydpi\\ic_launcher.xml"
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_rgpd.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_rgpd.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_card_orange.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/card_orange.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_recompensa.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_recompensa.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_seleccion_ejercicio.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_seleccion_ejercicio.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_logo.png.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_mis_actividades.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_mis_actividades.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/drawable_img3.jpg.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/drawable/img3.jpg"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_item_senderismo.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/item_senderismo.xml"
+    },
+    {
+        "merged": "com.example.mayoresfitmakers.app-debug-5:/layout_activity_map.xml.flat",
+        "source": "com.example.mayoresfitmakers.app-main-7:/layout/activity_map.xml"
     }
 ]

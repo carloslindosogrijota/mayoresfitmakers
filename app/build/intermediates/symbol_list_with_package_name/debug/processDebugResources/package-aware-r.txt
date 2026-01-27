@@ -3573,6 +3573,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_menu_gradient
+drawable bg_senderismo_card
 drawable bonuspack_bubble
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3656,6 +3657,11 @@ drawable ic_passkey
 drawable ic_password
 drawable ic_person
 drawable ic_search_black_24
+drawable imagencuartaruta
+drawable imagenprimeraruta
+drawable imagenquintaruta
+drawable imagensegundaruta
+drawable imagenterceraruta
 drawable img1
 drawable img2
 drawable img3
@@ -3746,6 +3752,7 @@ drawable osm_ic_follow_me_on
 drawable osm_ic_ic_map_ortho
 drawable person
 drawable previous
+drawable qr_descuento
 drawable round_navigation_white_48
 drawable sharp_add_black_36
 drawable sharp_remove_black_36
@@ -3886,6 +3893,7 @@ id btnCerrarRgpd
 id btnCesionImagen
 id btnConsentimientoGrabacion
 id btnCookies
+id btnDocumentosLegales
 id btnEstirar
 id btnFinalizar
 id btnFuerza
@@ -3897,6 +3905,8 @@ id btnModelosLegales
 id btnPerfil
 id btnRgpd
 id btnVolver
+id btn_llamar
+id btn_ok
 id bubble_description
 id bubble_image
 id bubble_moreinfo
@@ -3908,6 +3918,7 @@ id cache_measures
 id callMeasure
 id cancel_button
 id cardCaminar
+id cardContenido
 id cardEjerciciosSuaves
 id cardEstiramientos
 id cardLogros
@@ -3938,6 +3949,7 @@ id consentimientoContent
 id consentimientoRoot
 id constraint
 id container
+id contenidoActividades
 id content
 id contentPanel
 id contiguous
@@ -4064,6 +4076,7 @@ id imgEjerciciosSuavesFlecha
 id imgEstiramientos
 id imgEstiramientosFlecha
 id imgEvento
+id imgQr
 id immediateStop
 id included
 id indeterminate
@@ -4196,7 +4209,6 @@ id open_search_view_toolbar
 id open_search_view_toolbar_container
 id outline
 id outward
-id overlay
 id overshoot
 id packed
 id parallax
@@ -4239,6 +4251,7 @@ id scroll
 id scrollAnalisisLegal
 id scrollCesion
 id scrollConsentimiento
+id scrollContenido
 id scrollCookies
 id scrollDocumentosLegales
 id scrollIndicatorDown
@@ -4381,6 +4394,7 @@ id tvTituloAnalisisLegal
 id tvTituloCookies
 id tvTituloModelosLegales
 id tvTituloRgpd
+id tv_fall_message
 id txtCaminarSubtitulo
 id txtCaminarTitulo
 id txtContadorPasos
@@ -4393,6 +4407,7 @@ id txtEjerciciosSuavesTitulo
 id txtEstiramientosSubtitulo
 id txtEstiramientosTitulo
 id txtLugar
+id txtMensaje
 id txtNombre
 id txtNombreEjercicio
 id txtPatologias
@@ -4401,6 +4416,7 @@ id txtRacha
 id txtSaludoLogro
 id txtTiempo
 id txtTipo
+id txtTitulo
 id txtTituloPantalla
 id txtTituloRutina
 id txtUltimoLogro
@@ -4556,6 +4572,7 @@ layout activity_analisis_legal
 layout activity_cesion_imagen
 layout activity_consentimiento_grabacion
 layout activity_cookies
+layout activity_descuento
 layout activity_documentos_legales
 layout activity_eventos
 layout activity_login
@@ -4572,6 +4589,7 @@ layout activity_senderismo
 layout bonuspack_bubble
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout check_caida_activity
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
