@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Evento
 
@@ -18,10 +19,12 @@ class EventosAdapter(
         val imgEvento: ImageView = itemView.findViewById(R.id.imgEvento)
         val txtTipo: TextView = itemView.findViewById(R.id.txtTipo)
         val txtLugar: TextView = itemView.findViewById(R.id.txtLugar)
+        val txtPlazas: TextView? = itemView.findViewById(R.id.txtPlazas)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_evento, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_evento, parent, false)
         return EventoViewHolder(view)
     }
 
@@ -32,13 +35,29 @@ class EventosAdapter(
 
         holder.txtTipo.text = evento.tipo
         holder.txtLugar.text = evento.lugar
-        holder.imgEvento.setImageResource(evento.imageResId)
 
-        holder.itemView.setOnClickListener { onClick(evento) }
+        holder.txtPlazas?.text =
+            "${evento.inscripciones} / ${evento.cupoMax} plazas"
+
+        // Glide con URL
+        if (evento.imagenUrl.isNotBlank()) {
+            Glide.with(holder.itemView.context)
+                .load(evento.imagenUrl)
+                .centerCrop()
+                .into(holder.imgEvento)
+        } else {
+            holder.imgEvento.setImageResource(R.drawable.ic_launcher_foreground)
+        }
+
+        holder.itemView.setOnClickListener {
+            onClick(evento)
+        }
     }
 
-    fun updateList(newList: List<Evento>) {
-        eventos = newList
+    fun updateList(nuevaLista: List<Evento>) {
+        eventos = nuevaLista
         notifyDataSetChanged()
     }
+
+    fun getItem(position: Int): Evento = eventos[position]
 }

@@ -27,7 +27,7 @@ class CheckCaidaActivity : AppCompatActivity() {
 
         btnLlamar.setOnClickListener {
             // MVP: sin funcionalidad real (solo feedback)
-            Toast.makeText(this, "Función de emergencia no implementada (MVP).", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Función de emergencia no implementada", Toast.LENGTH_SHORT).show()
         }
     }
 
