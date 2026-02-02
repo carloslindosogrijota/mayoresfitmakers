@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/modelosLegalesRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarModelosLegales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:title="Modelos legales"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:id="@+id/scrollModelosLegales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/modelosLegalesContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTituloModelosLegales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Condiciones de uso de imágenes en la app y campañas"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvModelosLegalesTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:text="Las imágenes y vídeos obtenidos en el marco del proyecto estarán sujetos a las siguientes condiciones de uso:\n\nFinalidad del uso\n\nLas imágenes y grabaciones se utilizarán exclusivamente para fines relacionados con:\n\n• El funcionamiento y contenido de la aplicación de bienestar.\n• Actividades educativas y de sensibilización.\n• Comunicación institucional y campañas de difusión del proyecto.\n\nProhibición de usos indebidos\n\nEn ningún caso las imágenes podrán utilizarse con fines comerciales ajenos al proyecto, ni de manera que pueda resultar ofensiva, discriminatoria o contraria a la dignidad de las personas participantes.\n\nProtección de datos personales\n\nEl tratamiento de las imágenes cumplirá con la normativa vigente en materia de protección de datos personales. Se aplicarán medidas técnicas y organizativas para garantizar la seguridad y confidencialidad de los datos.\n\nAcceso y control\n\nEl acceso a las imágenes quedará limitado al personal autorizado del proyecto. No se ceden a terceros sin consentimiento expreso del participante.\n\nPlazo de conservación\n\nLas imágenes se conservarán únicamente durante el tiempo necesario para cumplir con la finalidad para la que fueron recogidas.\n\nDerechos de los participantes\n\nLos participantes podrán ejercer en cualquier momento sus derechos de acceso, rectificación, supresión o limitación del uso de su imagen mediante solicitud escrita a la entidad responsable.\n\nEstas condiciones serán accesibles desde la aplicación y comunicadas de forma clara a todos los participantes." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCerrarModelosLegales"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

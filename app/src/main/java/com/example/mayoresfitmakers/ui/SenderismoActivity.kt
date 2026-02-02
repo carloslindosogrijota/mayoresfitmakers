@@ -1,11 +1,13 @@
-package com.example.mayoresfitmakers
+package com.example.mayoresfitmakers.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Senderismo
 import com.example.proyectopruebas.SenderismoAdapter
 
@@ -38,6 +40,8 @@ class SenderismoActivity : AppCompatActivity() {
 
         // Por ahora el botón no hace nada
         btnApuntate.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
             // Implementar acción
         }
     }
@@ -46,15 +50,14 @@ class SenderismoActivity : AppCompatActivity() {
      * Carga las historias de ejemplo
      */
     private fun loadsenderismos() {
-        senderismos.apply {
-            // Agrega tus imágenes aquí (usa tus propios drawables)
-            add(Senderismo(android.R.drawable.ic_menu_gallery))
-            add(Senderismo(android.R.drawable.ic_menu_camera))
-            add(Senderismo(android.R.drawable.ic_menu_mapmode))
-            add(Senderismo(android.R.drawable.ic_menu_compass))
-            add(Senderismo(android.R.drawable.ic_menu_info_details))
-        }
+        senderismos.clear()
+
+        senderismos.add(Senderismo(nombre = "Ruta 1", imageResId = R.drawable.imagenprimeraruta))
+        senderismos.add(Senderismo(nombre = "Ruta 2", imageResId = R.drawable.imagensegundaruta))
+        senderismos.add(Senderismo(nombre = "Ruta 3", imageResId = R.drawable.imagenterceraruta))
+        senderismos.add(Senderismo(nombre = "Ruta 4", imageResId = R.drawable.imagencuartaruta))
     }
+
 
     /**
      * Configura el RecyclerView horizontal

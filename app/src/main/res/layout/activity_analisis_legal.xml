@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/analisisLegalRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarAnalisisLegal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:title="Análisis legal"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:id="@+id/scrollAnalisisLegal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/analisisLegalContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTituloAnalisisLegal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Análisis legal del proyecto Mi Bienestar"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvAnalisisLegalTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp"
+                android:text="Tipo de aplicación y público objetivo\n\nMi Bienestar se configura como una aplicación de bienestar y salud preventiva, destinada a ofrecer rutinas de ejercicio adaptadas y realizar un seguimiento del progreso del usuario. Aunque no tiene carácter médico ni diagnóstico, la aplicación trabaja con información relacionada con la condición física y la movilidad de los usuarios, lo que implica una especial atención desde el punto de vista de la protección de datos. El uso de la aplicación está orientado exclusivamente a mejorar la experiencia del usuario y a adaptar los contenidos a sus necesidades personales.\n\nEl público objetivo de la aplicación son personas de la tercera edad. Este perfil de usuario presenta determinadas particularidades que deben tenerse en cuenta en el diseño legal del proyecto. Las personas mayores pueden tener una menor familiaridad con las herramientas digitales, lo que hace imprescindible que la información legal sea clara, accesible y comprensible. Asimismo, se debe garantizar que los consentimientos otorgados por los usuarios sean verdaderamente informados y que se respete en todo momento su derecho a la protección de datos personales y a la privacidad.\n\nTratamiento de datos personales\n\nEn cuanto a los datos personales recogidos, la aplicación aplica el principio de minimización de datos, recopilando únicamente la información estrictamente necesaria para su correcto funcionamiento. Entre los datos tratados se incluyen datos identificativos básicos necesarios para la gestión de la cuenta del usuario, así como información relacionada con la movilidad, la realización de ejercicios y el progreso dentro de la aplicación. Estos datos, al estar vinculados con el estado físico del usuario, pueden considerarse datos de salud y, por tanto, requieren una protección reforzada conforme a la normativa vigente en materia de protección de datos.\n\nAsimismo, la aplicación recoge datos relacionados con el uso de la plataforma, como las preferencias del usuario, las interacciones dentro de la aplicación y los ajustes personalizados. También se recogen datos técnicos del dispositivo, tales como el tipo de dispositivo o el sistema operativo, con la única finalidad de garantizar el correcto funcionamiento de la aplicación y mejorar la experiencia de uso. En ningún caso se recogen datos innecesarios ni se utilizan con fines distintos a los establecidos.\n\nDocumentación legal necesaria\n\nTras el análisis inicial del proyecto, se considera imprescindible la elaboración de una serie de documentos legales que garanticen la seguridad jurídica de la aplicación. Entre ellos se encuentran la política de privacidad, que informe de manera transparente sobre el tratamiento de los datos personales, la política de cookies, que regule el uso de cookies técnicas y de personalización, el aviso legal, que identifique al responsable del servicio y establezca las condiciones de uso, y los consentimientos informados, especialmente relevantes por el tratamiento de datos relacionados con la salud y el uso de imágenes o vídeos de los participantes.\n\nRiesgos legales detectados\n\nDel análisis realizado se desprenden diversos riesgos legales que deben ser tenidos en cuenta. Uno de los principales riesgos es el tratamiento de datos sensibles relacionados con la movilidad y el bienestar físico, lo que exige la obtención de un consentimiento explícito y la adopción de medidas de seguridad adecuadas. Otro riesgo relevante deriva del perfil del público objetivo, ya que una información legal poco clara podría dar lugar a consentimientos no plenamente informados.\n\nAsimismo, el uso de imágenes y vídeos de los usuarios puede suponer un riesgo para la privacidad si no se limita adecuadamente su finalidad y acceso. Por último, aunque la aplicación utiliza únicamente cookies técnicas y funcionales, existe el riesgo de incumplimiento si no se informa correctamente a los usuarios sobre su uso y gestión.\n\nOtro de los riesgos legales más importantes es la conservación inadecuada de los datos personales de los usuarios. Aunque la aplicación indique que los datos se conservan mientras la cuenta está activa, puede surgir el problema de mantener información personal durante más tiempo del necesario.\n\nAdemás existe el riesgo de que, si permanecen copias de seguridad o registros técnicos, la eliminación de los datos no se realice de forma completa cuando el usuario lo solicite. Si los datos no se eliminan conforme a la normativa, se estaría incumpliendo el derecho de supresión reconocido en el Reglamento General de Protección de Datos.\n\nConclusión\n\nEn conclusión, el proyecto Mi Bienestar presenta una orientación adecuada hacia el cumplimiento de la normativa de protección de datos, al limitar la recogida de información, basar el tratamiento en el consentimiento del usuario y no ceder datos a terceros. No obstante, el perfil del público objetivo y el tipo de datos tratados hacen necesario un diseño legal claro y accesible que garantice la protección de los derechos de las personas mayores y minimice los riesgos legales asociados al proyecto." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCerrarAnalisisLegal"
+                app:backgroundTint="@color/verde_oscuro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

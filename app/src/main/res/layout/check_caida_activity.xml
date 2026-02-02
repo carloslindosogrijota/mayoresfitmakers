@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_fall_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parece que se ha detectado una caída.\n¿Estás bien?"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:paddingBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sí, estoy bien"
+        app:backgroundTint="@color/verde_oscuro"
+        android:textColor="@android:color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_llamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Llamar a emergencia"
+        app:backgroundTint="@color/verde_oscuro"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

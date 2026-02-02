@@ -1,7 +1,9 @@
-package com.example.mayoresfitmakers.datos.repositorio
+package com.example.mayoresfitmakers.datos.repositorio.infraestructura
 
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
-
 
 class AutenticacionRepository {
 
@@ -10,43 +12,61 @@ class AutenticacionRepository {
         fun onLoginError(mensaje: String)
     }
 
-    private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
+    private val auth = FirebaseAuth.getInstance()
 
     fun login(correo: String, contrasena: String, callback: LoginCallback) {
 
-        firebaseAuth
-            .signInWithEmailAndPassword(correo, contrasena)
+        Log.d("LOGIN", "AuthRepo.login() correo=$correo contrasenaLen=${contrasena.length}")
+
+        if (correo.isBlank()) {
+            callback.onLoginError("Correo vacío.")
+            return
+        }
+
+        if (contrasena.isBlank()) {
+            callback.onLoginError("Contraseña vacía.")
+            return
+        }
+
+        val tiempoMaximoMs = 12000L
+        val handler = Handler(Looper.getMainLooper())
+
+        val runnableTimeout = Runnable {
+            Log.e("LOGIN", "AuthRepo TIMEOUT tras ${tiempoMaximoMs}ms")
+            callback.onLoginError("Timeout de login (emulador/red/Play Services).")
+        }
+
+        handler.postDelayed(runnableTimeout, tiempoMaximoMs)
+
+        auth.signInWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener { task ->
+                handler.removeCallbacks(runnableTimeout)
+
+                Log.d("LOGIN", "AuthRepo.onComplete success=${task.isSuccessful}")
 
                 if (task.isSuccessful) {
-                    val user = firebaseAuth.currentUser
-                    if (user != null) {
-                        callback.onLoginOk(user.uid, user.email ?: correo)
-                    } else {
-                        callback.onLoginError("Usuario autenticado pero null")
+                    val usuario = auth.currentUser
+                    val uid = usuario?.uid
+                    val email = usuario?.email
+
+                    Log.d("LOGIN", "AuthRepo.currentUser uid=$uid email=$email")
+
+                    if (uid.isNullOrBlank()) {
+                        callback.onLoginError("Login OK pero uid nulo.")
+                        return@addOnCompleteListener
                     }
+
+                    callback.onLoginOk(uid, correo)
                 } else {
-                    callback.onLoginError(task.exception?.message ?: "Error en login")
+                    val mensaje = task.exception?.message ?: "Error desconocido en login."
+                    Log.e("LOGIN", "AuthRepo.login FAIL: $mensaje", task.exception)
+                    callback.onLoginError(mensaje)
                 }
             }
-    }
-
-    fun registrar(correo: String, contrasena: String, callback: LoginCallback) {
-
-        firebaseAuth
-            .createUserWithEmailAndPassword(correo, contrasena)
-            .addOnCompleteListener { task ->
-
-                if (task.isSuccessful) {
-                    val user = firebaseAuth.currentUser
-                    if (user != null) {
-                        callback.onLoginOk(user.uid, user.email ?: correo)
-                    } else {
-                        callback.onLoginError("Usuario creado pero null")
-                    }
-                } else {
-                    callback.onLoginError(task.exception?.message ?: "Error en registro")
-                }
+            .addOnFailureListener { exception ->
+                handler.removeCallbacks(runnableTimeout)
+                Log.e("LOGIN", "AuthRepo.addOnFailureListener: ${exception.message}", exception)
+                callback.onLoginError(exception.message ?: "Fallo en login.")
             }
     }
 }
