@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Senderismo
-import com.example.proyectopruebas.SenderismoAdapter
+import com.example.mayoresfitmakers.ui.adaptador.SenderismoAdapter
 
 /**
  * Activity simplificada que muestra historias en RecyclerView horizontal
@@ -47,15 +47,30 @@ class SenderismoActivity : AppCompatActivity() {
     }
 
     /**
-     * Carga las historias de ejemplo
+     * Carga las rutas de senderismo desde Firebase Firestore
      */
     private fun loadsenderismos() {
-        senderismos.clear()
+        val repository = com.example.mayoresfitmakers.datos.repositorio.MisActividadesRepository()
+        
+        repository.obtenerSenderismo(10, object : com.example.mayoresfitmakers.datos.repositorio.MisActividadesRepository.SenderismoCallback {
+            override fun onOk(lista: List<Senderismo>) {
+                senderismos.clear()
+                senderismos.addAll(lista)
+                recyclerView.adapter?.notifyDataSetChanged()
+            }
 
-        senderismos.add(Senderismo(nombre = "Ruta 1", imageResId = R.drawable.imagenprimeraruta))
-        senderismos.add(Senderismo(nombre = "Ruta 2", imageResId = R.drawable.imagensegundaruta))
-        senderismos.add(Senderismo(nombre = "Ruta 3", imageResId = R.drawable.imagenterceraruta))
-        senderismos.add(Senderismo(nombre = "Ruta 4", imageResId = R.drawable.imagencuartaruta))
+            override fun onVacio() {
+                // No hay rutas disponibles
+                senderismos.clear()
+                recyclerView.adapter?.notifyDataSetChanged()
+            }
+
+            override fun onError(mensaje: String) {
+                // Error al cargar datos
+                senderismos.clear()
+                recyclerView.adapter?.notifyDataSetChanged()
+            }
+        })
     }
 
 

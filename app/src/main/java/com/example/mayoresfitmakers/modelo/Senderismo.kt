@@ -5,5 +5,5 @@ data class Senderismo(
     var nombre: String = "",
     var ruta: String = "",
     var distancia: String = "",
-    var imageResId: Int = 0
+    var imageUrl: String = ""
 )
