@@ -15,7 +15,7 @@ class EventoRepository {
     private val collection = db.collection("evento")
 
     // Colección para relación N:M (usuario-evento)
-    private val inscripcionesCollection = db.collection("inscripciones")
+    private val inscripcionesCollection = db.collection("inscripciones_eventos")
 
     fun addEvento(evento: Evento, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
         val id: String = collection.document().id
@@ -24,7 +24,7 @@ class EventoRepository {
             "tipo" to evento.tipo,
             "lugar" to evento.lugar,
             "fecha" to Timestamp(Date(evento.fecha)),
-            "cupoMax" to evento.cupoMax,
+            "cupo_max" to evento.cupo_max,
             "inscripciones" to evento.inscripciones,
             "imagenUrl" to evento.imagenUrl
         )
@@ -45,7 +45,7 @@ class EventoRepository {
             "tipo" to evento.tipo,
             "lugar" to evento.lugar,
             "fecha" to Timestamp(Date(evento.fecha)),
-            "cupoMax" to evento.cupoMax,
+            "cupo_max" to evento.cupo_max,
             "inscripciones" to evento.inscripciones,
             "imagenUrl" to evento.imagenUrl
         )
@@ -83,8 +83,8 @@ class EventoRepository {
                     val fechaTs: Timestamp? = doc.getTimestamp("fecha")
                     val fecha: Long = fechaTs?.toDate()?.time ?: 0L
 
-                    val cupoMaxLong: Long = doc.getLong("cupoMax") ?: 0L
-                    val cupoMaxInt: Int = cupoMaxLong.toInt()
+                    val cupo_maxLong: Long = doc.getLong("cupo_max") ?: 0L
+                    val cupo_maxInt: Int = cupo_maxLong.toInt()
 
                     val inscritosLong: Long = doc.getLong("inscripciones") ?: 0L
                     val inscritosInt: Int = inscritosLong.toInt()
@@ -97,7 +97,7 @@ class EventoRepository {
                         lugar = lugar,
                         fecha = fecha,
                         imagenUrl = imagenUrl,
-                        cupoMax = cupoMaxInt,
+                        cupo_max = cupo_maxInt,
                         inscripciones = inscritosInt
                     )
 
@@ -137,10 +137,10 @@ class EventoRepository {
                 throw IllegalStateException("Ya estás apuntado a este evento")
             }
 
-            val cupoMax: Int = (eventoSnap.getLong("cupoMax") ?: 0L).toInt()
+            val cupo_max: Int = (eventoSnap.getLong("cupo_max") ?: 0L).toInt()
             val inscritos: Int = (eventoSnap.getLong("inscripciones") ?: 0L).toInt()
 
-            if (cupoMax > 0 && inscritos >= cupoMax) {
+            if (cupo_max > 0 && inscritos >= cupo_max) {
                 throw IllegalStateException("No quedan plazas disponibles")
             }
 
@@ -148,7 +148,7 @@ class EventoRepository {
             val data: Map<String, Any> = mapOf(
                 "eventoId" to eventoId,
                 "usuarioId" to usuarioId,
-                "createdAt" to Timestamp.now()
+                "fecha_inscripcion" to Timestamp.now()
             )
             tx.set(inscripcionDoc, data)
 

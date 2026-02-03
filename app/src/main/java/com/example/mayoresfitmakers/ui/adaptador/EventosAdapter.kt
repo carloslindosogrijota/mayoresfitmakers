@@ -37,7 +37,7 @@ class EventosAdapter(
         holder.txtLugar.text = evento.lugar
 
         holder.txtPlazas?.text =
-            "${evento.inscripciones} / ${evento.cupoMax} plazas"
+            "${evento.inscripciones} / ${evento.cupo_max} plazas"
 
         // Glide con URL
         if (evento.imagenUrl.isNotBlank()) {

@@ -11,6 +11,6 @@ data class Evento(
     var fecha: Long = 0L,
     var imagenUrl: String = "",
 
-    var cupoMax: Int = 0,
+    var cupo_max: Int = 0,
     var inscripciones: Int = 0
 )
