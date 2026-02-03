@@ -9,9 +9,7 @@ import java.util.Date
 class EventoRepository {
 
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
-
-    // CAMBIA AQUÍ si tu colección se llama distinto:
-    // "eventos" / "evento" / "Eventos"
+    //Collection que se apunta a la base de dato
     private val collection = db.collection("evento")
 
     // Colección para relación N:M (usuario-evento)

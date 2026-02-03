@@ -27,8 +27,6 @@ class EventosActivity : AppCompatActivity() {
 
     private var currentPosition = 0
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_eventos)
@@ -106,4 +104,3 @@ class EventosActivity : AppCompatActivity() {
         }
     }
 }
-

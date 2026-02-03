@@ -1,60 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="320dp"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardEvento"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="16dp">
+    android:layout_marginTop="104dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="18dp"
 
-    <LinearLayout
+    app:cardCornerRadius="24dp"
+    app:cardElevation="10dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/verde_oscuro"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_senderismo_card"
-        android:elevation="8dp"
-        android:padding="12dp"
-        android:orientation="vertical">
+        android:layout_height="600dp"
+        android:background="@android:color/white">
 
+        <!-- Imagen principal -->
         <ImageView
             android:id="@+id/imgEvento"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:contentDescription="@string/senderismo_image"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.62" />
 
+        <!-- Gradiente encima de la imagen (para estilo + legibilidad) -->
+        <View
+            android:id="@+id/overlayGradiente"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient_evento"
+            app:layout_constraintTop_toTopOf="@id/imgEvento"
+            app:layout_constraintBottom_toBottomOf="@id/imgEvento"
+            app:layout_constraintStart_toStartOf="@id/imgEvento"
+            app:layout_constraintEnd_toEndOf="@id/imgEvento" />
+
+        <!-- Texto principal encima de la imagen -->
         <TextView
             android:id="@+id/txtTipo"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
             android:text="Tipo"
-            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginTop="10dp" />
+            app:layout_constraintBottom_toBottomOf="@id/imgEvento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/txtLugar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lugar"
-            android:textSize="16sp"
-            android:layout_marginTop="4dp" />
+        <!-- Contenedor inferior -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenidoInferior"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/imgEvento"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- NUEVO: Fecha (opcional pero recomendable) -->
-        <TextView
-            android:id="@+id/txtFecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fecha"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp" />
+            <TextView
+                android:id="@+id/txtLugar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lugar"
+                android:textColor="#111111"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- NUEVO: Plazas / Inscritos -->
-        <TextView
-            android:id="@+id/txtPlazas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0 / 0 plazas"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp" />
+            <TextView
+                android:id="@+id/txtFecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Fecha"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/txtLugar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txtPlazas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0 / 0 plazas"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/txtFecha"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-</FrameLayout>
+            <!-- Línea decorativa para separar (estilo simple pero efectivo) -->
+            <View
+                android:id="@+id/separador"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="#E7E7E7"
+                app:layout_constraintTop_toBottomOf="@id/txtPlazas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Hint de acción (solo visual, no toca lógica) -->
+            <TextView
+                android:id="@+id/txtHint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Desliza para ver más eventos →"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/separador"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
