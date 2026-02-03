@@ -21,7 +21,6 @@ class PerfilUsuarioRepository {
 
         if (uid.isBlank()) {
             callback.onPerfilError("No se puede obtener perfil: uid vacío.")
-            return
         }
 
         firestore.collection(coleccionUsuarios)
@@ -71,7 +70,6 @@ class PerfilUsuarioRepository {
 
         if (idUsuario.isBlank()) {
             callback.onPerfilError("No se puede crear perfil: id vacío.")
-            return
         }
 
         firestore.collection(coleccionUsuarios)
