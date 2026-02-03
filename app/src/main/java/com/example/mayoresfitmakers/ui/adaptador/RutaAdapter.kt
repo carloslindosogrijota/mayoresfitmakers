@@ -4,10 +4,9 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mayoresfitmakers.ui.MapActivity
 import com.example.mayoresfitmakers.databinding.ItemRutaBinding
 import com.example.mayoresfitmakers.modelo.Ruta
-
+import com.example.mayoresfitmakers.ui.MapActivity
 
 class RutaAdapter(
     private val rutas: List<Ruta>
@@ -32,14 +31,11 @@ class RutaAdapter(
         holder.binding.txtTipo.text = ruta.tipo
 
         holder.binding.btnIr.setOnClickListener {
-            val context = holder.itemView.context
-            val intent = Intent(context, MapActivity::class.java)
-
+            val intent = Intent(holder.itemView.context, MapActivity::class.java)
             intent.putExtra("lat", ruta.latitud)
             intent.putExtra("lng", ruta.longitud)
             intent.putExtra("nombre", ruta.nombre)
-
-            context.startActivity(intent)
+            holder.itemView.context.startActivity(intent)
         }
     }
 
