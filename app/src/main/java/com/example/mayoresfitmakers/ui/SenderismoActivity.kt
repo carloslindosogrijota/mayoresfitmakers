@@ -38,11 +38,11 @@ class SenderismoActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.senderismosRecyclerView)
         btnApuntate = findViewById(R.id.btnApuntate)
 
-        // Por ahora el botón no hace nada
+
         btnApuntate.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
-            // Implementar acción
+
         }
     }
 
