@@ -66,7 +66,7 @@ class MisActividadesRepository {
             .addOnSuccessListener { snapshot ->
                 if (snapshot == null || snapshot.isEmpty) {
                     callback.onVacio()
-                   
+
                 }
 
                 val lista = mutableListOf<Ejercicio>()

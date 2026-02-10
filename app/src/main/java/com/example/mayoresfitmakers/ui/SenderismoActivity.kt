@@ -10,15 +10,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mayoresfitmakers.R
 import com.example.mayoresfitmakers.modelo.Senderismo
 import com.example.mayoresfitmakers.ui.adaptador.SenderismoAdapter
+import com.example.mayoresfitmakers.datos.repositorio.MisActividadesRepository
 
-/**
- * Activity simplificada que muestra historias en RecyclerView horizontal
- * Solo navegación manual, sin temporizador
- */
 class SenderismoActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var btnApuntate: Button
+    private lateinit var repository: MisActividadesRepository
+    private lateinit var layoutManager: LinearLayoutManager
+    private lateinit var snapHelper: PagerSnapHelper
+    private lateinit var adapter: SenderismoAdapter
 
     private val senderismos = mutableListOf<Senderismo>()
     private var currentPosition = 0
@@ -26,8 +27,6 @@ class SenderismoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_senderismo)
-
-
 
         initializeViews()
         loadsenderismos()
@@ -38,21 +37,16 @@ class SenderismoActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.senderismosRecyclerView)
         btnApuntate = findViewById(R.id.btnApuntate)
 
-
         btnApuntate.setOnClickListener {
-            val intent = Intent(this, MapActivity::class.java)
+            val intent: Intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
-
         }
     }
 
-    /**
-     * Carga las rutas de senderismo desde Firebase Firestore
-     */
     private fun loadsenderismos() {
-        val repository = com.example.mayoresfitmakers.datos.repositorio.MisActividadesRepository()
+        repository = MisActividadesRepository() 
         
-        repository.obtenerSenderismo(10, object : com.example.mayoresfitmakers.datos.repositorio.MisActividadesRepository.SenderismoCallback {
+        repository.obtenerSenderismo(10, object : MisActividadesRepository.SenderismoCallback {
             override fun onOk(lista: List<Senderismo>) {
                 senderismos.clear()
                 senderismos.addAll(lista)
@@ -60,45 +54,38 @@ class SenderismoActivity : AppCompatActivity() {
             }
 
             override fun onVacio() {
-                // No hay rutas disponibles
                 senderismos.clear()
                 recyclerView.adapter?.notifyDataSetChanged()
             }
 
             override fun onError(mensaje: String) {
-                // Error al cargar datos
                 senderismos.clear()
                 recyclerView.adapter?.notifyDataSetChanged()
             }
         })
     }
 
-
-    /**
-     * Configura el RecyclerView horizontal
-     */
     private fun setupRecyclerView() {
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = SenderismoAdapter(senderismos)
+        layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        adapter = SenderismoAdapter(senderismos)
+        snapHelper = PagerSnapHelper()
 
-        // Snap para que se centre cada imagen
-        val snapHelper = PagerSnapHelper()
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = adapter
         snapHelper.attachToRecyclerView(recyclerView)
 
-        // Detectar cambios de posición
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
 
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    val position = layoutManager.findFirstVisibleItemPosition()
+                    val position: Int = layoutManager.findFirstVisibleItemPosition()
+
                     if (position != currentPosition) {
                         currentPosition = position
                     }
                 }
             }
-        }
-        )
+        })
     }
 }
